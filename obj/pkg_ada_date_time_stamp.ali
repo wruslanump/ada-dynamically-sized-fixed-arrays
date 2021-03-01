@@ -1,0 +1,241 @@
+V "GNAT Lib v9"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_CALENDAR
+RV NO_DELAY
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_FIXED_POINT
+RV NO_IO
+RV NO_LOCAL_ALLOCATORS
+RV NO_NESTED_FINALIZATION
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U pkg_ada_date_time_stamp%b  pkg_ada_date_time_stamp.adb  c1d911af OO PK IL
+W ada%s			ada.ads			ada.ali
+W ada.calendar%s	a-calend.adb		a-calend.ali
+W ada.calendar.formatting%s  a-calfor.adb	a-calfor.ali
+W ada.calendar.time_zones%s  a-catizo.adb	a-catizo.ali
+W ada.command_line%s	a-comlin.adb		a-comlin.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+Z ada.real_time.delays%s  a-retide.adb		a-retide.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.bounded%s	a-strbou.adb		a-strbou.ali
+W ada.strings.fixed%s	a-strfix.adb		a-strfix.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+W ada.strings.unbounded.text_io%s  a-suteio.adb	a-suteio.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z system.concat_2%s	s-conca2.adb		s-conca2.ali
+Z system.img_lld%s	s-imglld.adb		s-imglld.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+Z system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
+
+U pkg_ada_date_time_stamp%s  pkg_ada_date_time_stamp.ads  d8d0f48a EE NE OO PK IL
+W ada%s			ada.ads			ada.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+
+D ada.ads		20200312110721 76789da1 ada%s
+D a-calend.ads		20200312110721 b288ede8 ada.calendar%s
+D a-calfor.ads		20200312110721 0a6f9afc ada.calendar.formatting%s
+D a-catizo.ads		20200312110721 409d7e5b ada.calendar.time_zones%s
+D a-charac.ads		20200312110721 2d3ec45b ada.characters%s
+D a-chlat1.ads		20200312110721 66457d31 ada.characters.latin_1%s
+D a-comlin.ads		20200312110721 4aa66568 ada.command_line%s
+D a-except.ads		20200312110721 291912d5 ada.exceptions%s
+D a-finali.ads		20200312110721 bf4f806b ada.finalization%s
+D a-ioexce.ads		20200312110721 e4a01f64 ada.io_exceptions%s
+D a-reatim.ads		20200312110721 0240fc73 ada.real_time%s
+D a-retide.ads		20200312110721 081cdaa4 ada.real_time.delays%s
+D a-stream.ads		20200312110721 119b8fb3 ada.streams%s
+D a-string.ads		20200312110721 90ac6797 ada.strings%s
+D a-strbou.ads		20200312110721 53ab54ae ada.strings.bounded%s
+D a-strfix.ads		20200312110721 d07c346e ada.strings.fixed%s
+D a-strmap.ads		20200312110721 e8bb714a ada.strings.maps%s
+D a-strsup.ads		20200312110721 a27dcb33 ada.strings.superbounded%s
+D a-strunb.ads		20200312110721 8098c91f ada.strings.unbounded%s
+D a-suteio.ads		20200312110721 26d8e9aa ada.strings.unbounded.text_io%s
+D a-tags.ads		20200312110721 491b781d ada.tags%s
+D a-textio.ads		20200312110721 881db35a ada.text_io%s
+D a-unccon.ads		20200312110721 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20200312110721 5ab55268 interfaces%s
+D i-c.ads		20200312110721 5421119b interfaces.c%s
+D i-cstrea.ads		20200312110721 e53d8b8e interfaces.c_streams%s
+D pkg_ada_date_time_stamp.ads  20210301031058 5a08c1e6 pkg_ada_date_time_stamp%s
+D pkg_ada_date_time_stamp.adb  20210301033328 166bd4a5 pkg_ada_date_time_stamp%b
+D system.ads		20200312110721 4635ec04 system%s
+D s-atacco.ads		20200312110721 4c36d12f system.address_to_access_conversions%s
+D s-atocou.ads		20200312110721 b45c2d8d system.atomic_counters%s
+D s-conca2.ads		20200312110721 02a0d7d0 system.concat_2%s
+D s-crtl.ads		20200312110721 0ebbdb71 system.crtl%s
+D s-exctab.ads		20200312110721 54135002 system.exception_table%s
+D s-ficobl.ads		20200312110721 078245e4 system.file_control_block%s
+D s-finmas.ads		20200312110721 7811a767 system.finalization_masters%s
+D s-finroo.ads		20200312110721 4ff27390 system.finalization_root%s
+D s-imglld.ads		20200312110721 f3220969 system.img_lld%s
+D s-linux.ads		20200312110721 ed0b8aee system.linux%s
+D s-memory.ads		20200312110721 597d6634 system.memory%s
+D s-multip.ads		20200312110721 38ac9f73 system.multiprocessors%s
+D s-oscons.ads		20200808120453 0b994636 system.os_constants%s
+D s-osinte.ads		20200312110721 710cf8c6 system.os_interface%s
+D s-parame.ads		20200312110721 48ec542b system.parameters%s
+D s-secsta.ads		20200312110721 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20200312110721 a7318a92 system.soft_links%s
+D s-stache.ads		20200312110721 a37c21ec system.stack_checking%s
+D s-stausa.ads		20200312110721 017a0a05 system.stack_usage%s
+D s-stalib.ads		20200312110721 09bd3940 system.standard_library%s
+D s-stalib.adb		20200312110721 f2fe2716 system.standard_library%b
+D s-stoele.ads		20200312110721 2dc34a04 system.storage_elements%s
+D s-stopoo.ads		20200312110721 b16154c2 system.storage_pools%s
+D s-stposu.ads		20200312110721 97a6219c system.storage_pools.subpools%s
+D s-stratt.ads		20200312110721 aedef97e system.stream_attributes%s
+D s-tasinf.ads		20200312110721 2b3f8252 system.task_info%s
+D s-taspri.ads		20200312110721 f40ac08d system.task_primitives%s
+D s-taprop.ads		20200312110721 1dd2e1b6 system.task_primitives.operations%s
+D s-taskin.ads		20200312110721 b9d612e2 system.tasking%s
+D s-traent.ads		20200312110721 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200312110721 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20200312110721 1b7d22d2 system.wch_con%s
+X 1 ada.ads
+16K9*Ada 20e8 27|8r6 9r6 10r6 11r6 19r25 20r25 28|17r6 18r6 19r6 20r6 22r6
+. 23r6 28r6 29r6 30r6 31r6 32r6 33r6 44r27 45r27 46r27 47r27 50r27 51r27
+. 52r27 53r27 54r27 55r27
+X 2 a-calend.ads
+36K13*Calendar 410e17 28|18w10 19r10 20r10 45r31 46r31
+42I9*Time<223I9>
+56V13*Clock{42I9} 28|84s44 96s77 111s76
+223I9 Time_Rep<long_long_integer>
+X 3 a-calfor.ads
+24K22*Formatting 215e28 28|19w19 46r40 84r22 96r54 111r53
+176V13*Image{string} 28|84s33 96s65 111s64
+X 4 a-catizo.ads
+19K22*Time_Zones 32e28 28|20w19
+X 7 a-comlin.ads
+36K13*Command_Line 144e21 28|33w10 55r31
+X 11 a-reatim.ads
+39K13*Real_Time 185e18 27|8w10 9r10 19r29 28|22w10 23r10 47r31
+49O9*Time<duration> 27|23r45 24r45 32r65 33r60 28|62r34 67r34 91r40 104r40
+. 165r65 195r59
+54O9*Time_Span<duration> 27|26r47 32r94 33r89 28|58r28 59r28 60r28 61r28
+. 69r29 121r47 165r94 166r26 195r88
+61V13*Clock{49O9} 28|62s52 85s29 113s64 127s24 135s24 143s24 151s24 159s24
+65V14*"+"{49O9} 28|127s30 135s30 143s30 151s30 159s30
+71V14*"-"{54O9} 28|172s62 176s37 182s62 186s37 197s22
+85V14*"-"{54O9} 28|176s50 186s50
+105V14*">"{boolean} 28|197r35
+110V13*To_Duration{duration} 28|73s61 172s39 174s39 177s39 182s39 184s39
+. 187s39
+115V13*Nanoseconds{54O9} 28|61s46 159s36
+117V13*Microseconds{54O9} 28|60s46 151s36
+119V13*Milliseconds{54O9} 28|59s46 143s36
+122V13*Seconds{54O9} 28|58s46 135s36
+130I9*Seconds_Count<long_long_integer> 28|68r29
+139U14*Split 28|71s18
+X 14 a-string.ads
+16K13*Strings 35e16 27|10r10 11r10 20r29 28|28w10 29r10 30r10 31r10 32r10
+. 50r31 51r31 52r31 53r31 54r31
+X 15 a-strbou.ads
+39K21*Bounded 914e24 28|30w18 52r39
+X 16 a-strfix.ads
+18K21*Fixed 251e22 28|29w18 51r39
+X 19 a-strunb.ads
+76K21*Unbounded 491e26 27|10w18 11r18 20r37 28|31w18 32r18 53r39 54r39
+79R9*Unbounded_String<9|43R9> 474e14 27|23r63 24r63 28|91r57 92r27 93r27
+. 104r57 105r26 106r26 107r30 108r27
+94V13*To_Unbounded_String{79R9} 28|96s28 111s27 113s31
+119V14*"&"{79R9} 28|114s34
+153V13*Unbounded_Slice{79R9} 28|97s28 112s27
+X 20 a-suteio.ads
+39K31*Text_IO 61e34 28|32w28 54r49
+X 22 a-textio.ads
+49K13*Text_IO 471e16 28|17w10 44r31
+166U14*New_Line 28|178s15 188s15
+242U14*Put 28|84s12 85s12 171s15 173s15 175s15 181s15 183s15 185s15
+263U14*Put_Line 28|170s15 172s15 174s15 177s15 180s15 182s15 184s15 187s15
+X 27 pkg_ada_date_time_stamp.ads
+14K9*pkg_ada_date_time_stamp 36l5 36e28 28|36b14 209l5 209t28
+19K12*AART=19:29 23r40 24r40 26r42 32r60 32r89 33r55 33r84 28|165r60 165r89
+. 166r21 195r54 195r83
+20K12*AASU=20:37 23r58 24r58
+22U14*dtstamp 28|82b15 86l13 86t20
+23V14*get_datestamp{19|79R9} 23>29 28|91b14 99l14 99t27
+23o29 RTNow{11|49O9} 28|91b28
+24V14*get_timestamp{19|79R9} 24>29 28|104b14 116l14 116t27
+24o29 RTNow{11|49O9} 28|104b28
+26U14*exec_delay_time 26>31 28|121b15 128l13 128t28
+26o31 interval{11|54O9} 28|121b32 127r32
+27U14*exec_delay_sec 27>31 28|133b14 136l8 136t22
+27i31 sec{positive} 28|133b30 135r44
+28U14*exec_delay_msec 28>31 28|141b14 144l8 144t23
+28i31 msec{positive} 28|141b31 143r49
+29U14*exec_delay_usec 29>31 28|149b14 152l8 152t23
+29i31 usec{positive} 28|149b31 151r49
+30U14*exec_delay_nsec 30>31 28|157b14 160l8 160t23
+30i31 nsec{positive} 28|157b31 159r48
+32U14*exec_check_overrun 32>33 32>44 32>71 28|165b14 190l8 190t26
+32o33 the_start{11|49O9} 28|165b33 168r24 172r64 176r39 182r64 186r39
+32o44 the_finish{11|49O9} 28|165b44 168r35 172r51 176r26 182r51 186r26
+32o71 the_deadline{11|54O9} 28|165b71 168r47 174r51 176r53 184r51 186r53
+33V14*getif_overrun{boolean} 33>28 33>39 33>66 28|168s10 195b13 203l8 203t21
+33o28 the_start{11|49O9} 28|195b27 197r24
+33o39 the_finish{11|49O9} 28|195b38 197r11
+33o66 the_deadline{11|54O9} 28|195b65 197r37
+X 28 pkg_ada_date_time_stamp.adb
+44K12 ATIO=44:31 84r7 85r7 170r10 171r10 172r10 173r10 174r10 175r10 177r10
+. 178r10 180r10 181r10 182r10 183r10 184r10 185r10 187r10 188r10
+45K12 ACal=45:31 84r17 84r39 96r49 96r72 111r48 111r71
+46K12 ACalF=46:40
+47K12 ART=47:31 58r24 58r42 59r24 59r42 60r24 60r42 61r24 61r42 62r30 62r48
+. 67r30 68r25 69r25 71r14 73r57 85r25 91r36 104r36 113r60 121r43 127r20 135r20
+. 135r32 143r20 143r32 151r20 151r32 159r20 159r32
+50K12 AS=50:31
+51K12 ASF=51:39
+52K12 ASB=52:39
+53K12 ASU=53:39 91r53 92r23 93r23 96r24 97r24 104r53 105r22 106r22 107r26
+. 108r23 111r23 112r23 113r27
+54K12 ASUTIO=54:49
+55K12 ACL=55:31
+58o6 sec_RTInterval{11|54O9}
+59o5 msec_RTInterval{11|54O9}
+60o5 usec_RTInterval{11|54O9}
+61o5 nsec_RTInterval{11|54O9}
+62o5 RTNext{11|49O9}
+67V14 GetTime{string} 67b14 67>22 77l9 77t16 85s17 113s52
+67o22 RTNow{11|49O9} 71r24
+68i14 Seconds{11|130I9} 71m31
+69o14 Fraction{11|54O9} 71m40 73r73
+73a11 TFraction{string} 75r23 75r36
+92r10 the_date{19|79R9} 96m10 97r45
+93r10 datestring{19|79R9} 97m10 98r18
+105r10 the_date{19|79R9} 111m10 112r44
+106r10 time_only{19|79R9} 112m10 114r24
+107r10 fraction_only{19|79R9} 113m10 114r36
+108r10 timestring{19|79R9} 114m10 115r18
+166o7 the_overrun{11|54O9} 176m10 177r51 186m10 187r51
+X 29 system.ads
+67M9*Address
+X 40 s-memory.ads
+53V13*Alloc{29|67M9} 103i<c,__gnat_malloc>22
+68U14*Free 104i<c,__gnat_free>22
+76V13*Realloc{29|67M9} 105i<c,__gnat_realloc>22
+X 48 s-stausa.ads
+203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
+268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
+X 50 s-stalib.adb
+93U14 Break_Start 94i<c,__gnat_break_start>22
+

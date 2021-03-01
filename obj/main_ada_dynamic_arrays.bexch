@@ -1,0 +1,27 @@
+[GENERATED OBJECT FILE]
+b__main_ada_dynamic_arrays.o
+[PROJECT FILES]
+/home/alimankalam/github-tests/ada-dynamic-arrays/ada_dynamic_arrays.gpr
+20210301040419
+[BOUND OBJECT FILES]
+/home/alimankalam/github-tests/ada-dynamic-arrays/obj/pkg_ada_date_time_stamp.o
+/home/alimankalam/github-tests/ada-dynamic-arrays/obj/pkg_ada_random_numbers.o
+/home/alimankalam/github-tests/ada-dynamic-arrays/obj/main_ada_dynamic_arrays.o
+[GENERATED SOURCE FILES]
+b__main_ada_dynamic_arrays.ads
+b__main_ada_dynamic_arrays.adb
+b__main_ada_dynamic_arrays.ali
+[RESULTING OPTIONS]
+-L/home/alimankalam/github-tests/ada-dynamic-arrays/obj/
+-L/home/alimankalam/github-tests/ada-dynamic-arrays/obj/
+-L/usr/lib/gcc/x86_64-linux-gnu/9/adalib/
+-shared
+-shared-libgcc
+-lgnarl-9
+-lgnat-9
+-lpthread
+-lrt
+-ldl
+[RUN PATH OPTION]
+/usr/lib/gcc/x86_64-linux-gnu/9/adalib/
+/usr/lib

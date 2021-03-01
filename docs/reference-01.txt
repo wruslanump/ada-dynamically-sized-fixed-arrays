@@ -1,0 +1,73 @@
+https://stackoverflow.com/questions/55580931/how-do-i-dynamically-create-a-fixed-size-array-in-ada?rq=1
+
+function Make_Grid return Grid_Type is
+   Dim1_Min, Dim1_Max : Natural;
+   Dim2_Min, Dim2_Max : Natural;
+begin
+   get(Dim1_Min);
+   get(Dim1_Max);
+   get(Dim2_Min);
+   get(Dim2_Max);
+
+   declare
+      New_Grid : Grid_Type(Dim1_Min..Dim1_Max, Dim2_Min..Dim2_Max);
+   begin
+      return New_Grid;
+   end;
+end Make_Grid;
+
+===============================================
+package Grids is
+   type Grid_type is array(Natural range <>, Natural range <>) of Integer;
+   function make_grid return Grid_Type;
+end Grids;
+
+
+with Ada.Integer_Text_IO; use Ada.Integer_Text_IO;
+
+=============================================
+package body Grids is
+
+   -- NOTE: A FUNCTION NOT A PROCEDURE
+   function make_grid return Grid_Type is
+
+      Dim1_Min, Dim1_Max : Natural; -- (0 and Positive)
+      Dim2_Min, Dim2_Max : Natural;
+
+   begin
+      Get(Dim1_Min);
+      Get(Dim1_Max);
+      Get(Dim2_Min);
+      Get(Dim2_Max);
+
+      declare  -- JUST IN-TIME USAGE
+         New_Grid : Grid_Type(Dim1_Min..Dim1_Max, Dim2_Min..Dim2_Max) := (Others =>(Others => 0));
+           
+      begin
+         return New_Grid;   -- THIS IS THE RETURN OBJECT TYPE
+      end;
+
+   end make_grid;
+   
+end Grids;
+========================================
+THE TEST PROGRAM
+========================================
+
+with Ada.Text_IO; use Ada.Text_IO;
+with Grids; use Grids;
+
+procedure Grids_Test is
+   The_Grid : Grid_type := Make_Grid;   --- Initialized to a function???
+   
+begin
+   Put_Line("Grid Dimensions");
+   Put_Line(Natural'Image(The_Grid'First(1)) & ".." &
+              Natural'Image(The_Grid'Last(1)) & " , " &
+              Natural'Image(The_Grid'First(2)) & "..." &
+                Natural'Image(The_Grid'Last(2)));
+end Grids_Test;
+
+=========================================
+
+
