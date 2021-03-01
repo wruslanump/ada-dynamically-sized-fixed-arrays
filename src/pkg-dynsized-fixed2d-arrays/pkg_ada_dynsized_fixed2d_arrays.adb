@@ -50,67 +50,48 @@ is
    -- =====================================================
    function get_array2d_integer (dim1_min, dim1_max : Natural; 
                                  dim2_min, dim2_max : Natural)                            
-                                 return typ_array2d  is  
+                                 return typ_array2d_int  is  
    begin
       declare  -- INSIDE BEGIN
-         Array2d : typ_array2d (dim1_min .. dim1_max, dim2_min .. dim2_max)
-                 := (Others =>(Others => 0));
+         Array2d_Int : typ_array2d_int (dim1_min .. dim1_max, 
+                                        dim2_min .. dim2_max)
+                     := (Others =>(Others => 0)); -- INITIALIZED ALL integer 0
       begin
-         return Array2d;   -- NOTE: This is the return object
+         return Array2d_Int;   -- NOTE: This is the return object
       end; -- END declare
     
    end get_array2d_integer;  -- END function 
 
-   
    -- ===================================================== 
-   -- PROCEDURE IMPLEMENTATIONS FOR THIS PACKAGE 
-   -- =====================================================
-   procedure create_2d_integer_array 
-     with SPARK_Mode => on
-   is 
-      
+   function get_array2d_float (dim1_min, dim1_max : Natural; 
+                               dim2_min, dim2_max : Natural)                            
+                               return typ_array2d_float  is  
    begin
-     ATIO.Put_Line("PROCESSING ...");
-      
-      
-     ATIO.Put_Line("COMPLETED. EXITING ...");
-   end create_2d_integer_array;   
-   -- =====================================================
-   
-   procedure create_2d_float_array
-     with SPARK_Mode => on
-   is 
-      
-   begin
-     ATIO.Put_Line("PROCESSING ...");
-      
-      
-     ATIO.Put_Line("COMPLETED. EXITING ...");
-   end create_2d_float_array;   
-   
-   -- =====================================================
-   procedure create_2d_string_array
-     with SPARK_Mode => on
-   is 
-      
-   begin
-      ATIO.Put_Line("PROCESSING ...");
-      
-      
-      ATIO.Put_Line("COMPLETED. EXITING ...");   
-   end create_2d_string_array;   
+      declare  -- INSIDE BEGIN
+         Array2d_float : typ_array2d_float (dim1_min .. dim1_max, 
+                                            dim2_min .. dim2_max)
+                       := (Others =>(Others => 0.0)); -- INITIALIZED ALL float 0.0
+      begin
+         return Array2d_float;   -- NOTE: This is the return object
+      end; -- END declare
+    
+   end get_array2d_float;  -- END function 
 
    -- =====================================================
-   procedure create_2d_character_array
-     with SPARK_Mode => on
-   is 
-      
-   begin
-      ATIO.Put_Line("PROCESSING ...");
-      
-      
-      ATIO.Put_Line("COMPLETED. EXITING ...");
-   end create_2d_character_array;   
+   function get_array2d_character (dim1_min, dim1_max : Natural; 
+                                   dim2_min, dim2_max : Natural)                            
+                                   return typ_array2d_char  is  
+   begin -- BEGIN FUNCTION
+      declare  -- INSIDE BEGIN
+         Array2d_char : typ_array2d_char (dim1_min .. dim1_max, 
+                                          dim2_min .. dim2_max)
+                      := (Others =>(Others => ' ')); -- INITIALIZED ALL char whitespece
+      begin
+         return Array2d_char;   -- NOTE: This is the return object
+      end; -- END DECLARE
+    
+   end get_array2d_character;  -- END FUNCTION 
+
    -- =====================================================
    
 -- ========================================================   

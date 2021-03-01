@@ -18,12 +18,12 @@ RV NO_ELABORATION_CODE
 RV NO_OBSOLESCENT_FEATURES
 RV SPARK_05
 
-U ada_main%b		b__main_ada_dynamically_sized_fixed_arrays.adb  5ef13550 OO PK IL
+U ada_main%b		b__main_ada_dynamically_sized_fixed_arrays.adb  47063f26 OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 Z system%s		system.ads		system.ali
 
-U ada_main%s		b__main_ada_dynamically_sized_fixed_arrays.ads  80d6f085 EE NE OO PK IL
+U ada_main%s		b__main_ada_dynamically_sized_fixed_arrays.ads  ea6a9153 EE NE OO PK IL
 W system%s		system.ads		system.ali
 W system.parameters%s	s-parame.adb		s-parame.ali
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
@@ -31,8 +31,8 @@ W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 D ada.ads		20200312110721 76789da1 ada%s
 D a-except.ads		20200312110721 291912d5 ada.exceptions%s
 D a-unccon.ads		20200312110721 0e9b276f ada.unchecked_conversion%s
-D b__main_ada_dynamically_sized_fixed_arrays.ads  20210301144124 aeb4ae9c ada_main%s
-D b__main_ada_dynamically_sized_fixed_arrays.adb  20210301144124 d95c8919 ada_main%b
+D b__main_ada_dynamically_sized_fixed_arrays.ads  20210301171701 c408cf4a ada_main%s
+D b__main_ada_dynamically_sized_fixed_arrays.adb  20210301171701 aa17e2b9 ada_main%b
 D system.ads		20200312110721 4635ec04 system%s
 D s-parame.ads		20200312110721 48ec542b system.parameters%s
 D s-secsta.ads		20200312110721 20bbe636 system.secondary_stack%s
@@ -44,7 +44,7 @@ X 1 ada.ads
 X 2 a-except.ads
 54K13*Exceptions 349e19 5|6w10
 X 4 b__main_ada_dynamically_sized_fixed_arrays.ads
-6K9*ada_main 761l5 761e13 5|8b14 318l5 318t13
+6K9*ada_main 782l5 782e13 5|8b14 318l5 318t13
 8i4*gnat_argc{integer} 12m22 12r22 5|290m7
 9m4*gnat_argv{6|67M9} 13m22 13r22 5|291m7
 10m4*gnat_envp{6|67M9} 14m22 14r22 5|292m7
@@ -78,7 +78,8 @@ X 4 b__main_ada_dynamically_sized_fixed_arrays.ads
 . 438r22 440r22 442r22 444r22 446r22 448r22 450r22 452r22 454r22 456r22 458r22
 . 460r22 462r22 464r22 466r22 468r22 470r22 472r22 474r22 476r22 478r22 480r22
 . 482r22 484r22 486r22 488r22 490r22 492r22 494r22 496r22 498r22 500r22 502r22
-. 504r22 506r22 508r22 510r22 512r22 514r22 516r22
+. 504r22 506r22 508r22 510r22 512r22 514r22 516r22 518r22 520r22 522r22 524r22
+. 526r22 528r22 530r22
 40m4*u00001{39M9} 41r22
 42m4*u00002{39M9} 43r22
 44m4*u00003{39M9} 45r22
@@ -318,6 +319,13 @@ X 4 b__main_ada_dynamically_sized_fixed_arrays.ads
 512m4*u00237{39M9} 513r22
 514m4*u00238{39M9} 515r22
 516m4*u00239{39M9} 517r22
+518m4*u00240{39M9} 519r22
+520m4*u00241{39M9} 521r22
+522m4*u00242{39M9} 523r22
+524m4*u00243{39M9} 525r22
+526m4*u00244{39M9} 527r22
+528m4*u00245{39M9} 529r22
+530m4*u00246{39M9} 531r22
 X 5 b__main_ada_dynamically_sized_fixed_arrays.adb
 10i4 E075{short_integer} 10m46 10r46 205m7 205r15
 11i4 E013{short_integer} 11m46 11r46 212m7 212r15
@@ -333,27 +341,27 @@ X 5 b__main_ada_dynamically_sized_fixed_arrays.adb
 21i4 E081{short_integer} 21m46 21r46 220m7 220r15
 22i4 E050{short_integer} 22m46 22r46 217m7 217r15
 23i4 E039{short_integer} 23m46 23r46 219m7 219r15
-24i4 E221{short_integer} 24m46 24r46 222m7 222r15
-25i4 E128{short_integer} 25m46 25r46 225m7 225r15
-26i4 E136{short_integer} 26m46 26r46 227m7 227r15
-27i4 E144{short_integer} 27m46 27r46 229m7 229r15
-28i4 E143{short_integer} 28m46 28r46 231m7 231r15
-29i4 E141{short_integer} 29m46 29r46 233m7 233r15
-30i4 E140{short_integer} 30m46 30r46 87m10 87r18 235m7 235r15
-31i4 E190{short_integer} 31m46 31r46 237m7 237r15
-32i4 E186{short_integer} 32m46 32r46 76m7 76r15 240m7 240r15
-33i4 E184{short_integer} 33m46 33r46 69m7 69r15 242m7 242r15
-34i4 E182{short_integer} 34m46 34r46 62m7 62r15 244m7 244r15
-35i4 E114{short_integer} 35m46 35r46 246m7 246r15
-36i4 E106{short_integer} 36m46 36r46 248m7 248r15
-37i4 E148{short_integer} 37m46 37r46 251m7 251r15
-38i4 E152{short_integer} 38m46 38r46 253m7 253r15
-39i4 E006{short_integer} 39m46 39r46 256m7 256r15
-40i4 E134{short_integer} 40m46 40r46 55m7 55r15 259m7 259r15
-41i4 E227{short_integer} 41m46 41r46 261m7 261r15
-42i4 E146{short_integer} 42m46 42r46 263m7 263r15
-43i4 E204{short_integer} 43m46 43r46 265m7 265r15
-44i4 E220{short_integer} 44m46 44r46 267m7 267r15
+24i4 E230{short_integer} 24m46 24r46 222m7 222r15
+25i4 E103{short_integer} 25m46 25r46 225m7 225r15
+26i4 E101{short_integer} 26m46 26r46 227m7 227r15
+27i4 E115{short_integer} 27m46 27r46 229m7 229r15
+28i4 E114{short_integer} 28m46 28r46 231m7 231r15
+29i4 E112{short_integer} 29m46 29r46 233m7 233r15
+30i4 E111{short_integer} 30m46 30r46 87m10 87r18 235m7 235r15
+31i4 E213{short_integer} 31m46 31r46 237m7 237r15
+32i4 E209{short_integer} 32m46 32r46 76m7 76r15 240m7 240r15
+33i4 E207{short_integer} 33m46 33r46 69m7 69r15 242m7 242r15
+34i4 E205{short_integer} 34m46 34r46 62m7 62r15 244m7 244r15
+35i4 E169{short_integer} 35m46 35r46 246m7 246r15
+36i4 E161{short_integer} 36m46 36r46 248m7 248r15
+37i4 E183{short_integer} 37m46 37r46 251m7 251r15
+38i4 E187{short_integer} 38m46 38r46 253m7 253r15
+39i4 E152{short_integer} 39m46 39r46 256m7 256r15
+40i4 E099{short_integer} 40m46 40r46 55m7 55r15 259m7 259r15
+41i4 E236{short_integer} 41m46 41r46 261m7 261r15
+42i4 E181{short_integer} 42m46 42r46 263m7 263r15
+43i4 E227{short_integer} 43m46 43r46 265m7 265r15
+44i4 E229{short_integer} 44m46 44r46 267m7 267r15
 46a4 Sec_Default_Sized_Stacks(8|45R9) 187m32 187r32
 48a4 Local_Priority_Specific_Dispatching{string} 174r9
 49a4 Local_Interrupt_States{string} 177r27

@@ -2,7 +2,19 @@
 <Locations >
   <Project>
     <vfs_file>/home/wruslan/github-ump/ada-dynamically-sized-fixed-arrays/ada_dynamically_sized_fixed_arrays.gpr</vfs_file>
-    <file_marker current="true" column=" 1" line=" 1" >
+    <file_marker column=" 7" line=" 233" >
+      <vfs_project>/home/wruslan/github-ump/ada-dynamically-sized-fixed-arrays/ada_dynamically_sized_fixed_arrays.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github-ump/ada-dynamically-sized-fixed-arrays/src/main_ada_dynamically_sized_fixed_arrays.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 26" line=" 91" >
+      <vfs_project>/home/wruslan/github-ump/ada-dynamically-sized-fixed-arrays/ada_dynamically_sized_fixed_arrays.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github-ump/ada-dynamically-sized-fixed-arrays/src/pkg-dynsized-fixed2d-arrays/pkg_ada_dynsized_fixed2d_arrays.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 97" >
+      <vfs_project>/home/wruslan/github-ump/ada-dynamically-sized-fixed-arrays/ada_dynamically_sized_fixed_arrays.gpr</vfs_project>
+      <vfs_file>/home/wruslan/github-ump/ada-dynamically-sized-fixed-arrays/src/main_ada_dynamically_sized_fixed_arrays.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 48" line=" 95" >
       <vfs_project>/home/wruslan/github-ump/ada-dynamically-sized-fixed-arrays/ada_dynamically_sized_fixed_arrays.gpr</vfs_project>
       <vfs_file>/home/wruslan/github-ump/ada-dynamically-sized-fixed-arrays/src/main_ada_dynamically_sized_fixed_arrays.adb</vfs_file>
     </file_marker>
