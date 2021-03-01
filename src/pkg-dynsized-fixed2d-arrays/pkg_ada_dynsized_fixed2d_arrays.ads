@@ -23,6 +23,13 @@ is
    -- RENAMING USER-CREATED PACKAGES
 
    -- LIST OF FUNCTIONS
+   -- NOTE: All 2D array integer elements initialized to zero during creation
+   type typ_array2d is array(Natural range <>, Natural range <>) of Integer;
+   function get_array2d_integer (dim1_min, dim1_max : Natural; 
+                                 dim2_min, dim2_max : Natural)                            
+                                 return typ_array2d;  
+   
+   
    
    -- LIST OF PROCEDURES
    procedure create_2d_integer_array;

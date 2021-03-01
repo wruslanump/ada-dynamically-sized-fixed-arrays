@@ -21,11 +21,11 @@ package Grids is
    type Grid_type is array(Natural range <>, Natural range <>) of Integer;
    function make_grid return Grid_Type;
 end Grids;
-
+==============================================
 
 with Ada.Integer_Text_IO; use Ada.Integer_Text_IO;
 
-=============================================
+
 package body Grids is
 
    -- NOTE: A FUNCTION NOT A PROCEDURE

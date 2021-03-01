@@ -1,37 +1,37 @@
 V "GNAT Lib v9"
-M P W=b
 A -gnatA
 A -mtune=generic
 A -march=x86-64
 P ZX
 
 RN
-RV NO_FLOATING_POINT
 RV NO_IO
 RV NO_SECONDARY_STACK
-RV NO_STANDARD_STORAGE_POOLS
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U main_ada_dynamically_sized_fixed_arrays%b  main_ada_dynamically_sized_fixed_arrays.adb  b8f59aff NE OO SU IL
+U pkg_ada_dynsized_fixed2d_arrays%b  pkg_ada_dynsized_fixed2d_arrays.adb  260e8da7 OO PK IL
 W ada%s			ada.ads			ada.ali
-W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W pkg_ada_date_time_stamp%s  pkg_ada_date_time_stamp.adb  pkg_ada_date_time_stamp.ali
-W pkg_ada_dynsized_fixed2d_arrays%s  pkg_ada_dynsized_fixed2d_arrays.adb  pkg_ada_dynsized_fixed2d_arrays.ali
-W pkg_ada_random_numbers%s  pkg_ada_random_numbers.adb  pkg_ada_random_numbers.ali
-Z system.concat_2%s	s-conca2.adb		s-conca2.ali
-Z system.concat_6%s	s-conca6.adb		s-conca6.ali
-Z system.img_int%s	s-imgint.adb		s-imgint.ali
 Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+U pkg_ada_dynsized_fixed2d_arrays%s  pkg_ada_dynsized_fixed2d_arrays.ads  286e1064 EE NE OO PK IL
+W ada%s			ada.ads			ada.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
 
 D ada.ads		20200312110721 76789da1 ada%s
 D a-charac.ads		20200312110721 2d3ec45b ada.characters%s
 D a-chlat1.ads		20200312110721 66457d31 ada.characters.latin_1%s
 D a-except.ads		20200312110721 291912d5 ada.exceptions%s
 D a-finali.ads		20200312110721 bf4f806b ada.finalization%s
+D a-inteio.ads		20200312110721 f64b89a4 ada.integer_text_io%s
 D a-ioexce.ads		20200312110721 e4a01f64 ada.io_exceptions%s
 D a-reatim.ads		20200312110721 0240fc73 ada.real_time%s
 D a-stream.ads		20200312110721 119b8fb3 ada.streams%s
@@ -40,25 +40,22 @@ D a-strmap.ads		20200312110721 e8bb714a ada.strings.maps%s
 D a-strunb.ads		20200312110721 8098c91f ada.strings.unbounded%s
 D a-tags.ads		20200312110721 491b781d ada.tags%s
 D a-textio.ads		20200312110721 881db35a ada.text_io%s
+D a-tiinio.ads		20200312110721 aa04e5d6 ada.text_io.integer_io%s
 D a-unccon.ads		20200312110721 0e9b276f ada.unchecked_conversion%s
 D interfac.ads		20200312110721 5ab55268 interfaces%s
 D i-c.ads		20200312110721 5421119b interfaces.c%s
 D i-cstrea.ads		20200312110721 e53d8b8e interfaces.c_streams%s
-D main_ada_dynamically_sized_fixed_arrays.adb  20210301144118 a2acab3b main_ada_dynamically_sized_fixed_arrays%b
 D pkg_ada_date_time_stamp.ads  20210301031058 5a08c1e6 pkg_ada_date_time_stamp%s
 D pkg_ada_dynsized_fixed2d_arrays.ads  20210301133637 aab62508 pkg_ada_dynsized_fixed2d_arrays%s
-D pkg_ada_random_numbers.ads  20210301063901 60ba9a03 pkg_ada_random_numbers%s
+D pkg_ada_dynsized_fixed2d_arrays.adb  20210301125959 a8e653b7 pkg_ada_dynsized_fixed2d_arrays%b
 D system.ads		20200312110721 4635ec04 system%s
 D s-atacco.ads		20200312110721 4c36d12f system.address_to_access_conversions%s
 D s-atocou.ads		20200312110721 b45c2d8d system.atomic_counters%s
-D s-conca2.ads		20200312110721 02a0d7d0 system.concat_2%s
-D s-conca6.ads		20200312110721 d2c72db2 system.concat_6%s
 D s-crtl.ads		20200312110721 0ebbdb71 system.crtl%s
 D s-exctab.ads		20200312110721 54135002 system.exception_table%s
 D s-ficobl.ads		20200312110721 078245e4 system.file_control_block%s
 D s-finmas.ads		20200312110721 7811a767 system.finalization_masters%s
 D s-finroo.ads		20200312110721 4ff27390 system.finalization_root%s
-D s-imgint.ads		20200312110721 02dbe0c2 system.img_int%s
 D s-linux.ads		20200312110721 ed0b8aee system.linux%s
 D s-multip.ads		20200312110721 38ac9f73 system.multiprocessors%s
 D s-oscons.ads		20200808120453 0b994636 system.os_constants%s
@@ -81,45 +78,40 @@ D s-traent.ads		20200312110721 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20200312110721 34867c83 system.unsigned_types%s
 D s-wchcon.ads		20200312110721 1b7d22d2 system.wch_con%s
 X 1 ada.ads
-16K9*Ada 20e8 18|7r6 8r6 8r25 24r28 25r28
-X 7 a-reatim.ads
-39K13*Real_Time 185e18 18|8w10 8r29 25r32
-X 13 a-textio.ads
-49K13*Text_IO 471e16 18|7w10 24r32
-166U14*New_Line 18|50s63 66s9 94s12 106s12 111s9
-263U14*Put_Line 18|48s24 49s24 50s9 54s9 59s15 71s9 85s12 86s12 90s12 93s12
-. 99s15 111s24 112s24
-X 18 main_ada_dynamically_sized_fixed_arrays.adb
-18U11*main_ada_dynamically_sized_fixed_arrays 18b11 115l5 115t44
-24K12 ATIO=24:32 48r19 49r19 50r4 50r58 54r4 59r10 66r4 71r4 85r7 86r7 90r7
-. 93r7 94r7 99r10 106r7 111r4 111r19 112r19
-25K12 ART=25:32
-28K12 PADTS=28:28 48r4 49r4 112r4
-29K12 PARN=29:28 58r39 92r36
-31K12 PADF2D=31:27 44r25 44r47 80r28 80r50
-35i4 ret_integer{integer}
-36f4 ret_float{float}
-38i4 dim1min{natural} 44r75 55r13 75m4 80r78 96r16
-38i28 dim1max{natural} 44r84 55r24 75m18 80r87 96r27
-39i4 dim2min{natural} 44r93 56r16 75m32 80r96 97r19
-39i28 dim2max{natural} 44r102 56r27 75m46 80r105 97r30
-44a4 Array2D_Integer_01{20|27A9} 58r10 62r39
-55i8 I{integer} 58r30 60r40 62r59
-56i11 J{integer} 58r33 61r40 62r61
-80a7 Array2D_Integer_02{20|27A9} 85r70 86r70 89r7 90r70 92r7 93r70 102r39
-96i11 I{integer} 100r40 102r59
-97i14 J{integer} 101r40 102r61
-X 19 pkg_ada_date_time_stamp.ads
-14K9*pkg_ada_date_time_stamp 18|11w6 28r28 19|36e28
-22U14*dtstamp 18|48s10 49s10 112s10
-X 20 pkg_ada_dynsized_fixed2d_arrays.ads
-15K9*pkg_ada_dynsized_fixed2d_arrays 18|14w6 31r27 20|41e36
-27A9*typ_array2d(integer)<integer><integer> 18|44r32 80r35
-28V13*get_array2d_integer{27A9} 18|44s54 80s57
-X 21 pkg_ada_random_numbers.ads
-3K9*pkg_ada_random_numbers 18|12w6 29r28 21|33e27
-9V13*get_random_integer{integer} 18|58s44 92s41
-X 41 s-stausa.ads
+16K9*Ada 20e8 21|7r6 8r6 9r6 10r6 20r25 21r25 22|17r6 18r6 35r27 36r27
+X 6 a-inteio.ads
+18K13*Integer_Text_IO[15|46] 22|18w10 36r31
+X 8 a-reatim.ads
+39K13*Real_Time 185e18 21|7w10 8r10 20r29
+X 10 a-string.ads
+16K13*Strings 35e16 21|9r10 10r10 21r29
+X 12 a-strunb.ads
+76K21*Unbounded 491e26 21|9w18 10r18 21r37
+X 14 a-textio.ads
+49K13*Text_IO 471e16 22|17w10 35r31
+263U14*Put_Line 22|73s11 76s11 85s11 88s11 97s12 100s12 109s12 112s12
+X 20 pkg_ada_date_time_stamp.ads
+14K9*pkg_ada_date_time_stamp 36e28 22|22w6 41r27
+X 21 pkg_ada_dynsized_fixed2d_arrays.ads
+15K9*pkg_ada_dynsized_fixed2d_arrays 41l5 41e36 22|25b14 122l5 122t36
+20K12*AART=20:29
+21K12*AASU=21:37
+27A9*typ_array2d(integer)<integer><integer> 30r41 22|53r41 56r20
+28V13*get_array2d_integer{27A9} 28>34 28>44 29>34 29>44 22|51b13 62l8 62t27
+28i34 dim1_min{natural} 22|51b34 56r33
+28i44 dim1_max{natural} 22|51b44 56r45
+29i34 dim2_min{natural} 22|52b34 56r55
+29i44 dim2_max{natural} 22|52b44 56r67
+35U14*create_2d_integer_array 22|68b14 77l8 77t31
+36U14*create_2d_float_array 22|80b14 89l8 89t29
+37U14*create_2d_string_array 22|92b14 101l8 101t30
+38U14*create_2d_character_array 22|104b14 113l8 113t33
+X 22 pkg_ada_dynsized_fixed2d_arrays.adb
+35K12 ATIO=35:31 73r6 76r6 85r6 88r6 97r7 100r7 109r7 112r7
+36K12 AITIO=36:31
+41K12 PADTS=41:27
+56a10 Array2d{21|27A9} 59r17
+X 39 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
 

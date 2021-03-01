@@ -1,0 +1,207 @@
+gprbuild -d -P/home/wruslan/github-ump/ada-dynamically-sized-fixed-arrays/ada_dynamically_sized_fixed_arrays.gpr -s -k
+Compile
+   [Ada]          main_ada_dynamically_sized_fixed_arrays.adb
+   [Ada]          pkg_ada_date_time_stamp.adb
+   [Ada]          pkg_ada_dynsized_fixed2d_arrays.adb
+   [Ada]          pkg_ada_random_numbers.adb
+Bind
+   [gprbind]      main_ada_dynamically_sized_fixed_arrays.bexch
+   [Ada]          main_ada_dynamically_sized_fixed_arrays.ali
+Link
+   [link]         main_ada_dynamically_sized_fixed_arrays.adb
+[2021-03-01 22:27:56] process terminated successfully, elapsed time: 01.45s
+
+/home/wruslan/github-ump/ada-dynamically-sized-fixed-arrays/exec/main_ada_dynamically_sized_fixed_arrays.adx
+2021-03-01 14:29:50.86314294076 Bismillah 3 times WRY
+2021-03-01 14:29:50.86314316014 Running inside GNAT Studio Community
+MAIN PROGRAM STARTED SUCCESSFULLY.
+
+TESTING Array2D_Integer_01 (1..4, 3..7) assignments.
+Array2D_Integer_01 ( 1, 3) = -7
+Array2D_Integer_01 ( 1, 4) =  7
+Array2D_Integer_01 ( 1, 5) =  10
+Array2D_Integer_01 ( 1, 6) = -10
+Array2D_Integer_01 ( 1, 7) =  3
+Array2D_Integer_01 ( 2, 3) = -10
+Array2D_Integer_01 ( 2, 4) = -10
+Array2D_Integer_01 ( 2, 5) = -2
+Array2D_Integer_01 ( 2, 6) =  8
+Array2D_Integer_01 ( 2, 7) = -7
+Array2D_Integer_01 ( 3, 3) =  10
+Array2D_Integer_01 ( 3, 4) = -10
+Array2D_Integer_01 ( 3, 5) = -8
+Array2D_Integer_01 ( 3, 6) = -10
+Array2D_Integer_01 ( 3, 7) =  3
+Array2D_Integer_01 ( 4, 3) = -6
+Array2D_Integer_01 ( 4, 4) = -7
+Array2D_Integer_01 ( 4, 5) =  2
+Array2D_Integer_01 ( 4, 6) =  6
+Array2D_Integer_01 ( 4, 7) =  6
+
+TESTING Array2D_Integer02 (dim1min, dim1max, dim2min, dim2max)) assignments.
+Array2D_Integer_02 (2, 3) =  0
+Array2D_Integer_02 (5, 4) =  0
+Array2D_Integer_02 (2, 2) =  255
+Array2D_Integer_02 (7, 4) =  143
+
+
+MAIN PROGRAM TERMINATED SUCCESSFULLY.
+2021-03-01 14:29:50.86314470535 Alhamdulillah 3 times WRY
+[2021-03-01 22:29:50] process terminated successfully, elapsed time: 00.20s
+
+===========================================================
+/home/wruslan/github-ump/ada-dynamically-sized-fixed-arrays/exec/main_ada_dynamically_sized_fixed_arrays.adx
+2021-03-01 14:41:25.41866525168 Bismillah 3 times WRY
+2021-03-01 14:41:25.41866541945 Running inside GNAT Studio Community
+MAIN PROGRAM STARTED SUCCESSFULLY.
+
+TESTING Array2D_Integer_01 (1..4, 3..7) assignments.
+Array2D_Integer_01 ( 1, 3) =  6
+Array2D_Integer_01 ( 1, 4) = -7
+Array2D_Integer_01 ( 1, 5) = -8
+Array2D_Integer_01 ( 1, 6) =  3
+Array2D_Integer_01 ( 1, 7) = -9
+Array2D_Integer_01 ( 2, 3) = -10
+Array2D_Integer_01 ( 2, 4) =  1
+Array2D_Integer_01 ( 2, 5) = -10
+Array2D_Integer_01 ( 2, 6) =  7
+Array2D_Integer_01 ( 2, 7) =  1
+Array2D_Integer_01 ( 3, 3) =  10
+Array2D_Integer_01 ( 3, 4) =  5
+Array2D_Integer_01 ( 3, 5) =  0
+Array2D_Integer_01 ( 3, 6) =  2
+Array2D_Integer_01 ( 3, 7) =  9
+Array2D_Integer_01 ( 4, 3) = -7
+Array2D_Integer_01 ( 4, 4) = -10
+Array2D_Integer_01 ( 4, 5) =  4
+Array2D_Integer_01 ( 4, 6) = -4
+Array2D_Integer_01 ( 4, 7) = -7
+
+TESTING Array2D_Integer02 (dim1min, dim1max, dim2min, dim2max)) assignments.
+Array2D_Integer_02 (2, 3) =  0
+Array2D_Integer_02 (5, 4) =  0
+Array2D_Integer_02 (2, 2) =  2055
+Array2D_Integer_02 (3, 4) =  134
+
+Array2D_Integer_02 ( 1, 1) =  0
+Array2D_Integer_02 ( 1, 2) =  0
+Array2D_Integer_02 ( 1, 3) =  0
+Array2D_Integer_02 ( 1, 4) =  0
+Array2D_Integer_02 ( 2, 1) =  0
+Array2D_Integer_02 ( 2, 2) =  2055
+Array2D_Integer_02 ( 2, 3) =  0
+Array2D_Integer_02 ( 2, 4) =  0
+Array2D_Integer_02 ( 3, 1) =  0
+Array2D_Integer_02 ( 3, 2) =  0
+Array2D_Integer_02 ( 3, 3) =  0
+Array2D_Integer_02 ( 3, 4) =  134
+Array2D_Integer_02 ( 4, 1) =  0
+Array2D_Integer_02 ( 4, 2) =  0
+Array2D_Integer_02 ( 4, 3) =  0
+Array2D_Integer_02 ( 4, 4) =  0
+Array2D_Integer_02 ( 5, 1) =  0
+Array2D_Integer_02 ( 5, 2) =  0
+Array2D_Integer_02 ( 5, 3) =  0
+Array2D_Integer_02 ( 5, 4) =  0
+Array2D_Integer_02 ( 6, 1) =  0
+Array2D_Integer_02 ( 6, 2) =  0
+Array2D_Integer_02 ( 6, 3) =  0
+Array2D_Integer_02 ( 6, 4) =  0
+
+
+MAIN PROGRAM TERMINATED SUCCESSFULLY.
+2021-03-01 14:41:25.41866787586 Alhamdulillah 3 times WRY
+[2021-03-01 22:41:25] process terminated successfully, elapsed time: 00.21s
+
+===========================================================
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github-ump/ada-dynamically-sized-fixed-arrays$ ls -al
+total 44
+drwxrwxr-x  9 wruslan wruslan 4096 Mar  1 17:05 .
+drwxrwxr-x 14 wruslan wruslan 4096 Mar  1 17:08 ..
+-rw-rw-r--  1 wruslan wruslan 1570 Mar  1 15:48 ada_dynamically_sized_fixed_arrays.gpr
+drwxrwxr-x  4 wruslan wruslan 4096 Mar  1 22:42 docs
+drwxrwxr-x  2 wruslan wruslan 4096 Mar  1 22:41 exec
+drwxrwxr-x  2 wruslan wruslan 4096 Mar  1 10:48 figures
+drwxrwxr-x  2 wruslan wruslan 4096 Mar  1 10:47 files
+drwxrwxr-x  8 wruslan wruslan 4096 Mar  1 22:41 .git
+drwxrwxr-x  2 wruslan wruslan 4096 Mar  1 22:41 obj
+-rw-rw-r--  1 wruslan wruslan   93 Mar  1 17:05 README.md
+drwxrwxr-x  7 wruslan wruslan 4096 Mar  1 22:41 src
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github-ump/ada-dynamically-sized-fixed-arrays$ 
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github-ump/ada-dynamically-sized-fixed-arrays$ tree ./
+./
+├── ada_dynamically_sized_fixed_arrays.gpr
+├── docs
+│   ├── references
+│   │   └── reference-01.txt
+│   ├── session-01.txt
+│   └── templates
+│       ├── full_ada_dynamic_arrays.gpr
+│       ├── main_ada_dynamic_arrays.adb
+│       └── simplified_ada_dynamic_arrays.gpr
+├── exec
+│   ├── main_ada_dynamically_sized_fixed_arrays.adx
+│   └── main_ada_dynamic_arrays.adx
+├── figures
+├── files
+├── obj
+│   ├── ada_dynamically_sized_fixed_arrays-loc.xml
+│   ├── ada_dynamic_arrays-loc.xml
+│   ├── b__main_ada_dynamically_sized_fixed_arrays.adb
+│   ├── b__main_ada_dynamically_sized_fixed_arrays.ads
+│   ├── b__main_ada_dynamically_sized_fixed_arrays.ali
+│   ├── b__main_ada_dynamically_sized_fixed_arrays.o
+│   ├── b__main_ada_dynamic_arrays.adb
+│   ├── b__main_ada_dynamic_arrays.ads
+│   ├── b__main_ada_dynamic_arrays.ali
+│   ├── b__main_ada_dynamic_arrays.o
+│   ├── gpsauto.cgpr
+│   ├── main_ada_dynamically_sized_fixed_arrays.adb.stderr
+│   ├── main_ada_dynamically_sized_fixed_arrays.adb.stdout
+│   ├── main_ada_dynamically_sized_fixed_arrays.ali
+│   ├── main_ada_dynamically_sized_fixed_arrays.bexch
+│   ├── main_ada_dynamically_sized_fixed_arrays.cswi
+│   ├── main_ada_dynamically_sized_fixed_arrays.o
+│   ├── main_ada_dynamic_arrays.adb.stderr
+│   ├── main_ada_dynamic_arrays.adb.stdout
+│   ├── main_ada_dynamic_arrays.ali
+│   ├── main_ada_dynamic_arrays.bexch
+│   ├── main_ada_dynamic_arrays.o
+│   ├── pkg_ada_date_time_stamp.adb.stderr
+│   ├── pkg_ada_date_time_stamp.adb.stdout
+│   ├── pkg_ada_date_time_stamp.ali
+│   ├── pkg_ada_date_time_stamp.cswi
+│   ├── pkg_ada_date_time_stamp.o
+│   ├── pkg_ada_dynsized_fixed2d_arrays.adb.stderr
+│   ├── pkg_ada_dynsized_fixed2d_arrays.adb.stdout
+│   ├── pkg_ada_dynsized_fixed2d_arrays.ali
+│   ├── pkg_ada_dynsized_fixed2d_arrays.cswi
+│   ├── pkg_ada_dynsized_fixed2d_arrays.o
+│   ├── pkg_ada_random_numbers.adb.stderr
+│   ├── pkg_ada_random_numbers.adb.stdout
+│   ├── pkg_ada_random_numbers.ali
+│   ├── pkg_ada_random_numbers.cswi
+│   └── pkg_ada_random_numbers.o
+├── README.md
+└── src
+    ├── main_ada_dynamically_sized_fixed_arrays.adb
+    ├── pkg-ada-date-time-stamp
+    │   ├── pkg_ada_date_time_stamp.adb
+    │   └── pkg_ada_date_time_stamp.ads
+    ├── pkg-ada-random-numbers
+    │   ├── pkg_ada_random_numbers.adb
+    │   └── pkg_ada_random_numbers.ads
+    ├── pkg-dynsized-fixed1d-arrays
+    ├── pkg-dynsized-fixed2d-arrays
+    │   ├── pkg_ada_dynsized_fixed2d_arrays.adb
+    │   └── pkg_ada_dynsized_fixed2d_arrays.ads
+    └── pkg-dynsized-fixed3d-arrays
+
+13 directories, 53 files
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github-ump/ada-dynamically-sized-fixed-arrays$ 
+
+===========================================================
+ALHAMDULILLAH 3 TIMES.
+===========================================================
+
+

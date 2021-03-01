@@ -21,9 +21,9 @@ package body ada_main is
    E081 : Short_Integer; pragma Import (Ada, E081, "system__object_reader_E");
    E050 : Short_Integer; pragma Import (Ada, E050, "system__dwarf_lines_E");
    E039 : Short_Integer; pragma Import (Ada, E039, "system__traceback__symbolic_E");
-   E205 : Short_Integer; pragma Import (Ada, E205, "ada__numerics_E");
-   E132 : Short_Integer; pragma Import (Ada, E132, "ada__tags_E");
-   E130 : Short_Integer; pragma Import (Ada, E130, "ada__streams_E");
+   E221 : Short_Integer; pragma Import (Ada, E221, "ada__numerics_E");
+   E128 : Short_Integer; pragma Import (Ada, E128, "ada__tags_E");
+   E136 : Short_Integer; pragma Import (Ada, E136, "ada__streams_E");
    E144 : Short_Integer; pragma Import (Ada, E144, "system__file_control_block_E");
    E143 : Short_Integer; pragma Import (Ada, E143, "system__finalization_root_E");
    E141 : Short_Integer; pragma Import (Ada, E141, "ada__finalization_E");
@@ -37,10 +37,11 @@ package body ada_main is
    E148 : Short_Integer; pragma Import (Ada, E148, "ada__calendar_E");
    E152 : Short_Integer; pragma Import (Ada, E152, "ada__calendar__time_zones_E");
    E006 : Short_Integer; pragma Import (Ada, E006, "ada__real_time_E");
-   E128 : Short_Integer; pragma Import (Ada, E128, "ada__text_io_E");
-   E211 : Short_Integer; pragma Import (Ada, E211, "system__random_seed_E");
+   E134 : Short_Integer; pragma Import (Ada, E134, "ada__text_io_E");
+   E227 : Short_Integer; pragma Import (Ada, E227, "system__random_seed_E");
    E146 : Short_Integer; pragma Import (Ada, E146, "pkg_ada_date_time_stamp_E");
-   E204 : Short_Integer; pragma Import (Ada, E204, "pkg_ada_random_numbers_E");
+   E204 : Short_Integer; pragma Import (Ada, E204, "pkg_ada_dynsized_fixed2d_arrays_E");
+   E220 : Short_Integer; pragma Import (Ada, E220, "pkg_ada_random_numbers_E");
 
    Sec_Default_Sized_Stacks : array (1 .. 1) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
 
@@ -51,7 +52,7 @@ package body ada_main is
 
    procedure finalize_library is
    begin
-      E128 := E128 - 1;
+      E134 := E134 - 1;
       declare
          procedure F1;
          pragma Import (Ada, F1, "ada__text_io__finalize_spec");
@@ -218,12 +219,12 @@ package body ada_main is
       E039 := E039 + 1;
       E081 := E081 + 1;
       Ada.Numerics'Elab_Spec;
-      E205 := E205 + 1;
+      E221 := E221 + 1;
       Ada.Tags'Elab_Spec;
       Ada.Tags'Elab_Body;
-      E132 := E132 + 1;
+      E128 := E128 + 1;
       Ada.Streams'Elab_Spec;
-      E130 := E130 + 1;
+      E136 := E136 + 1;
       System.File_Control_Block'Elab_Spec;
       E144 := E144 + 1;
       System.Finalization_Root'Elab_Spec;
@@ -255,13 +256,15 @@ package body ada_main is
       E006 := E006 + 1;
       Ada.Text_Io'Elab_Spec;
       Ada.Text_Io'Elab_Body;
-      E128 := E128 + 1;
+      E134 := E134 + 1;
       System.Random_Seed'Elab_Body;
-      E211 := E211 + 1;
+      E227 := E227 + 1;
       pkg_ada_date_time_stamp'elab_body;
       E146 := E146 + 1;
-      pkg_ada_random_numbers'elab_body;
+      pkg_ada_dynsized_fixed2d_arrays'elab_body;
       E204 := E204 + 1;
+      pkg_ada_random_numbers'elab_body;
+      E220 := E220 + 1;
    end adainit;
 
    procedure Ada_Main_Program;
@@ -298,6 +301,7 @@ package body ada_main is
 
 --  BEGIN Object file/option list
    --   /home/wruslan/github-ump/ada-dynamically-sized-fixed-arrays/obj/pkg_ada_date_time_stamp.o
+   --   /home/wruslan/github-ump/ada-dynamically-sized-fixed-arrays/obj/pkg_ada_dynsized_fixed2d_arrays.o
    --   /home/wruslan/github-ump/ada-dynamically-sized-fixed-arrays/obj/pkg_ada_random_numbers.o
    --   /home/wruslan/github-ump/ada-dynamically-sized-fixed-arrays/obj/main_ada_dynamically_sized_fixed_arrays.o
    --   -L/home/wruslan/github-ump/ada-dynamically-sized-fixed-arrays/obj/
