@@ -20,7 +20,7 @@ package ada_main is
                     "GNAT Version: 9.3.0" & ASCII.NUL;
    pragma Export (C, GNAT_Version, "__gnat_version");
 
-   Ada_Main_Program_Name : constant String := "_ada_main_ada_dynamically_sized_fixed_arrays" & ASCII.NUL;
+   Ada_Main_Program_Name : constant String := "_ada_main_ada_dynamically_sized_fixed_2d_arrays" & ASCII.NUL;
    pragma Export (C, Ada_Main_Program_Name, "__gnat_ada_main_program_name");
 
    procedure adainit;
@@ -37,8 +37,8 @@ package ada_main is
    pragma Export (C, main, "main");
 
    type Version_32 is mod 2 ** 32;
-   u00001 : constant Version_32 := 16#f1e794e2#;
-   pragma Export (C, u00001, "main_ada_dynamically_sized_fixed_arraysB");
+   u00001 : constant Version_32 := 16#b3590fa4#;
+   pragma Export (C, u00001, "main_ada_dynamically_sized_fixed_2d_arraysB");
    u00002 : constant Version_32 := 16#050ff2f0#;
    pragma Export (C, u00002, "system__standard_libraryB");
    u00003 : constant Version_32 := 16#4113f22b#;
@@ -776,7 +776,7 @@ package ada_main is
    --  pkg_ada_dynsized_fixed2d_arrays%b
    --  pkg_ada_random_numbers%s
    --  pkg_ada_random_numbers%b
-   --  main_ada_dynamically_sized_fixed_arrays%b
+   --  main_ada_dynamically_sized_fixed_2d_arrays%b
    --  END ELABORATION ORDER
 
 end ada_main;

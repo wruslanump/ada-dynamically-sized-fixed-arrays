@@ -1,4 +1,4 @@
--- File: main_ada_dynamically_sized_fixed_2d_arrays.adb
+-- File: main_ada_dynamically_sized_fixed_1d_arrays.adb
 -- Date: Mon 01 Mar 2021 11:04:46 AM +08
 -- Author: WRY wruslan.ump@gmail.com
 -- ========================================================
@@ -17,7 +17,7 @@ with pkg_ada_dynsized_fixed2d_arrays;
 -- with pkg_ada_dynsized_fixed3d_arrays;
 
 -- ========================================================
-procedure main_ada_dynamically_sized_fixed_2d_arrays
+procedure main_ada_dynamically_sized_fixed_1d_arrays
 -- ========================================================
 	with SPARK_Mode => on
 is 
@@ -342,5 +342,5 @@ begin  -- for procedure main
    PADTS.dtstamp; ATIO.Put_Line ("Alhamdulillah 3 times WRY");
    
 -- ========================================================   
-end main_ada_dynamically_sized_fixed_2d_arrays;
+end main_ada_dynamically_sized_fixed_1d_arrays;
 -- ========================================================

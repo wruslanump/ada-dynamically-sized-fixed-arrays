@@ -1,0 +1,62 @@
+ADA CODE SPLIT LINE
+===============================
+
+https://stackoverflow.com/questions/22854765/string-handling-in-ada
+
+The fact that GNAT.String_Split uses String doesn’t mean that your StrArray has to. And you need to cater for input strings with varying numbers of tokens, so begin by declaring StrArray as an unconstrained array type:
+
+type StrArray is array (Positive range <>)
+  of Ada.Strings.Unbounded.Unbounded_String;
+
+Now Split begins like this:
+
+function Split (Line : String; Sep : String) return StrArray is
+   Tokens : GNAT.String_Split.Slice_Set;
+begin
+
+(we can’t declare Output yet, and we won’t need Count; and I had to go to Google to find out that String_Split is a GNAT utility package).
+
+The first thing to do is to split the input line, so that we know how large Output needs to be (by the way, do you really want Single?):
+
+   GNAT.String_Split.Create (S => Tokens,
+                             From => Line,
+                             Separators => Sep,
+                             Mode => GNAT.String_Split.Single);
+
+Now we can declare Output using the Slice_Count. Note the conversion to Natural (not Positive; if the input is an empty string, there will be no tokens, so the output will be an empty array, range 1 .. 0).
+
+   declare
+      Output : StrArray
+        (1 .. Natural (GNAT.String_Split.Slice_Count (Tokens)));
+   begin
+
+Now fill Output with the tokens. AdaCore chose to implement Slice_Number as new Natural, rather than as a subtype of Natural, which is why we need the conversion.
+
+      for I in Output'Range loop
+         Output (I) :=
+           Ada.Strings.Unbounded.To_Unbounded_String
+             (GNAT.String_Split.Slice
+                (Tokens, GNAT.String_Split.Slice_Number (I)));
+      end loop;
+
+... and return Output, within the declare block.
+
+      return Output;
+   end;
+
+end Split;
+
+To call Split, which is going to return a StrArray whose length you don’t know beforehand, you can use the technique of constraint by initial value:
+
+declare
+   T : constant StrArray := Split ("goodbye  world ", " ");
+begin
+   for J in T'Range loop
+      Ada.Text_IO.Put_Line ("'"
+                              & Ada.Strings.Unbounded.To_String (T (J))
+                              & "'");
+   end loop;
+end;
+
+==========================================
+

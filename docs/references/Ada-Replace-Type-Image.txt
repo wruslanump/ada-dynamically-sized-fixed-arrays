@@ -1,0 +1,64 @@
+
+Replace Integer'Image () and so on
+=======================================
+
+Ada.Integer_Text_IO.Put(Item => Distance, Fore=>4, Aft=>2, Exp=>0);
+
+Ada.Float_Text_IO.Put(Item => Distance, Fore=>4, Aft=>2, Exp=>0);
+
+Ada.Text_IO.New_Line;
+
+becomes
+
+AITIO.Put(Item => Distance, Fore => 4, Aft=>2, Exp=>0);
+AFTIO.Put(Item => Distance, Fore => 4, Aft=>2, Exp=>0);
+ATIO.New_Line;
+
+
+Ada.Integer_Text_IO.Put (Item => i,      Width => 1);
+Ada.Integer_Text_IO.Put (Item => Square, Width => 1);
+
+================================================
+
+REF: http://www.isa.uniovi.es/docencia/TiempoReal/Recursos/textbook/aps6-1.htm
+
+Ada.Text_IO.Put(Item => "Celsius     Fahrenheit");  
+  Ada.Text_IO.New_Line (Spacing => 2);
+
+  Celsius := CStart;
+  WHILE Celsius >= CLimit LOOP
+
+    Fahrenheit := 1.8 * Celsius + 32.0;
+    Ada.Float_Text_IO.Put
+      (Item => Celsius, Fore => 4, Aft => 0, Exp => 0);  
+    Ada.Text_IO.Put(Item => "        ");
+    Ada.Float_Text_IO.Put
+      (Item => Fahrenheit, Fore => 3, Aft => 1, Exp => 0);  
+    Ada.Text_IO.New_Line;
+
+    Celsius := Celsius + CStep;
+  END LOOP;
+
+END Temp_Table;
+
+Sample Run
+=======================================
+Celsius     Fahrenheit
+
+ 100.0        212.0
+  90.0        194.0
+  80.0        176.0
+  70.0        158.0
+  60.0        140.0
+  50.0        122.0
+  40.0        104.0
+  30.0         86.0
+  20.0         68.0
+  10.0         50.0
+   0.0         32.0
+ -10.0         14.0
+ -20.0         -4.0
+
+========================================
+
+

@@ -22,7 +22,7 @@ is
    -- RENAME USER-DEFINED ADA PACKAGES FOR CONVENIENCE
    package PADTS   renames pkg_ada_dtstamp;
       
-begin
+begin -- FOR MAIN
    PADTS.dtstamp; ATIO.Put_Line ("Bismillah 3 times WRY");
    PADTS.dtstamp; ATIO.Put_Line ("Running inside GNAT Studio Community");
 

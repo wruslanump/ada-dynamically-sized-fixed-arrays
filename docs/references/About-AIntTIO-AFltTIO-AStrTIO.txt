@@ -1,0 +1,100 @@
+
+===========================================================
+-- This removes the need of 'Image for various variables
+===========================================================
+    
+         ATIO.Put ("TESTING: Decimal(126) = ");
+         
+         -- ATIO.Put (" Binary(126) = ");
+         AIntTIO.Put(126, Width => 13, Base => 2);  -- Min for base
+         
+         -- ATIO.Put (" Octal(126) = ");
+         AIntTIO.Put(126, Width => 13, Base => 8);
+         
+         -- ATIO.Put (" Decimal(126) = ");
+         AIntTIO.Put(126, Width => 13, Base => 10);
+         
+         -- ATIO.Put (" Hex(126) = ");
+         AIntTIO.Put(126, Width => 13, Base => 16); -- Max for Base
+         ATIO.New_Line;
+
+Result for above:
+TESTING: Decimal(126) =    2#1111110#       8#176#          126       16#7E#
+
+
+===========================================================
+http://www.ada-auth.org/standards/12rm/html/RM-A-10-8.html
+
+
+Integer_Text_IO is a library package that is a nongeneric equivalent to Text_IO.Integer_IO for the predefined type Integer: 
+
+with Ada.Text_IO;
+package Ada.Integer_Text_IO is new Ada.Text_IO.Integer_IO(Integer);
+
+subtype Byte_Int is Integer range -127 .. 127;
+package Int_IO is new Integer_IO(Byte_Int); 
+use Int_IO;
+-- default format used at instantiation,
+-- Default_Width = 4, Default_Base = 10
+
+
+Put(126);                            -- "b126"           -- b is blank
+Put(-126, 7);                        -- "bbb–​126"
+Put(126, Width => 13, Base => 2);    -- "bbb2#1111110#"  -- BINARY OUTPUT
+
+===========================================================
+Default_Width = 4, Default_Base = 10 
+
+FOR INTEGER OUTPUT
+======================
+with Ada.Integer_Text_IO;  
+package AIntTIO renames with Ada.Integer_Text_IO;  
+
+AIntTIO.Put(4534);
+AIntTIO.Put(int_Variable);
+AIntTIO.Put(126, Width => 13, Base => 2);
+
+ THE FORMAT SPECIFICATION WITHOUT USING 'Image
+ 
+ USING INTEGER FORMAT 
+ EXAMPLE: AIntTIO.Put(126, Width => 3, Base => 10);
+ 
+   AIntTIO.Put (Item => (value int_variable), 
+                Width => (width of int_variable), 
+                Base => (base of int_variable );
+
+FOR FLOAT OUTPUT
+===========================================================
+with Ada.Float_Text_IO;  
+package AFltTIO renames with Ada.Float_Text_IO;  
+
+EXAMPLE: AFltTIO.Put(X, Fore => 5, Aft => 3, Exp => 2);   
+
+-- USING FLOAT FORMAT 
+         -- Format based on distance referred to decimal point
+         -- Fore = before decimal point
+         -- Aft  = after decimal point
+         -- Exp  = width of exponent (including + and - sign)
+
+AFltTIO.Put(312.66);
+AFltTIO.Put(float_Variable);
+AFltTIO.Put(511.267, Width => 13, Base => 10, Exp = 0);
+AFltTIO.Put(Item => 5121.26778, Width => 14, Base => 10, Exp = 1);
+
+REF: https://www.adaic.org/resources/add_content/standards/05rm/html/RM-A-10-9.html
+
+For floating point types, the default lengths of these fields are defined 
+by the following variables that are declared in the generic package Float_IO:
+
+Default_Fore : Field := 2;
+Default_Aft  : Field := Num'Digits-1;
+Default_Exp  : Field := 3;
+
+
+===========================================================
+
+
+
+
+
+

@@ -1,0 +1,275 @@
+IMPORTANT: https://stackoverflow.com/questions/22854765/string-handling-in-ada
+
+REF: https://www.adaic.org/resources/add_content/standards/05rm/html/RM-A-4-5.html
+
+REF: https://www.adaic.org/resources/add_content/standards/05rm/html/RM-A-4-2.html
+
+https://craftofcoding.wordpress.com/2018/02/18/coding-ada-strings-ii-unbounded/
+
+with Ada.Strings.Unbounded; 
+with Ada.Strings.Maps;
+
+package ASU renames Ada.Strings.Unbounded; 
+package ASM renames Ada.Strings.Maps; 
+
+
+-- LENGTH OF UNBOUNDED STRING
+-- ===================================================
+
+   function Length (Source : in Unbounded_String) return Natural;
+
+-- CONVERSION
+-- ========================================================
+   function To_Unbounded_String (Source : in String)   return Unbounded_String;
+   function To_Unbounded_String (Length : in Natural)  return Unbounded_String;
+   function To_String (Source : in Unbounded_String) return String;
+   procedure Set_Unbounded_String (Target : out Unbounded_String; Source : in String);
+
+-- CONCATENATION
+-- ========================================================
+   procedure Append (Source : in out Unbounded_String; New_Item : in Unbounded_String);
+   procedure Append (Source : in out Unbounded_String; New_Item : in String);
+   procedure Append (Source : in out Unbounded_String; New_Item : in Character);
+
+-- SELECTION
+-- ========================================================
+   function Element (Source : in Unbounded_String; Index  : in Positive) return Character;
+   procedure Replace_Element (Source : in out Unbounded_String; Index  : in Positive; By : in Character);
+
+   function Slice            (Source : in Unbounded_String; Low  : in Positive; High : in Natural) return String;
+   function Unbounded_Slice  (Source : in Unbounded_String; Low  : in Positive; High : in Natural) return Unbounded_String;
+   procedure Unbounded_Slice (Source : in Unbounded_String; Target : out Unbounded_String; Low : in Positive; High : in Natural);   
+   
+-- SEARCH SUBPROGRAMS
+-- ========================================================
+   function Index (Source  : in Unbounded_String; 
+                   Pattern : in String; 
+                   From    : in Positive; 
+                   Going   : in Direction := Forward; 
+                   Mapping : in Maps.Character_Mapping := Maps.Identity) return Natural;
+
+   function Index (Source  : in Unbounded_String;
+                   Pattern : in String;
+                   From    : in Positive;
+                   Going   : in Direction := Forward;
+                   Mapping : in Maps.Character_Mapping_Function) return Natural;
+
+   function Index (Source   : in Unbounded_String;
+                   Pattern  : in String;
+                   Going    : in Direction := Forward;
+                   Mapping  : in Maps.Character_Mapping := Maps.Identity) return Natural;
+
+   function Index (Source   : in Unbounded_String;
+                   Pattern  : in String;
+                   Going    : in Direction := Forward;
+                   Mapping  : in Maps.Character_Mapping_Function) return Natural;
+
+   function Index (Source  : in Unbounded_String;
+                   Set     : in Maps.Character_Set;
+                   From    : in Positive;
+                   Test    : in Membership := Inside;
+                   Going   : in Direction := Forward) return Natural;
+
+   function Index (Source : in Unbounded_String;
+                   Set    : in Maps.Character_Set;
+                   Test   : in Membership := Inside;
+                   Going  : in Direction  := Forward) return Natural;
+
+   function Index_Non_Blank (Source : in Unbounded_String;
+                             From   : in Positive;
+                             Going  : in Direction := Forward) return Natural;
+
+   function Index_Non_Blank (Source : in Unbounded_String;
+                             Going  : in Direction := Forward) return Natural;
+
+   function Count (Source   : in Unbounded_String;
+                   Pattern  : in String;
+                   Mapping  : in Maps.Character_Mapping := Maps.Identity) return Natural;
+
+   function Count (Source   : in Unbounded_String;
+                   Pattern  : in String;
+                   Mapping  : in Maps.Character_Mapping_Function) return Natural;
+
+   function Count (Source   : in Unbounded_String;
+                   Set      : in Maps.Character_Set) return Natural;
+
+   procedure Find_Token (Source : in Unbounded_String;
+                         Set    : in Maps.Character_Set;
+                         Test   : in Membership;
+                         First  : out Positive;
+                         Last   : out Natural);
+
+-- STRING TRANSLATION SUBPROGRAMS
+-- ========================================================
+   function Translate (Source  : in Unbounded_String;
+                       Mapping : in Maps.Character_Mapping) return Unbounded_String;
+
+   procedure Translate (Source  : in out Unbounded_String;
+                        Mapping : in Maps.Character_Mapping);
+
+   function Translate (Source  : in Unbounded_String;
+                       Mapping : in Maps.Character_Mapping_Function) return Unbounded_String;
+
+   procedure Translate (Source  : in out Unbounded_String;
+                        Mapping : in Maps.Character_Mapping_Function);
+
+-- STRING TRANSFORMATION SUBPROGRAMS
+-- ========================================================
+   function Replace_Slice (Source   : in Unbounded_String;
+                           Low      : in Positive;
+                           High     : in Natural;
+                           By       : in String) return Unbounded_String;
+
+   procedure Replace_Slice (Source   : in out Unbounded_String;
+                            Low      : in Positive;
+                            High     : in Natural;
+                            By       : in String);
+
+   function Insert (Source   : in Unbounded_String;
+                    Before   : in Positive;
+                    New_Item : in String) return Unbounded_String;
+
+   procedure Insert (Source   : in out Unbounded_String;
+                     Before   : in Positive;
+                     New_Item : in String);
+
+   function Overwrite (Source    : in Unbounded_String;
+                       Position  : in Positive;
+                       New_Item  : in String) return Unbounded_String;
+
+   procedure Overwrite (Source    : in out Unbounded_String;
+                        Position  : in Positive;
+                        New_Item  : in String);
+
+   function Delete (Source  : in Unbounded_String;
+                    From    : in Positive;
+                    Through : in Natural) return Unbounded_String;
+
+   procedure Delete (Source  : in out Unbounded_String;
+                     From    : in Positive;
+                     Through : in Natural);
+
+   function Trim (Source : in Unbounded_String;
+                  Side   : in Trim_End) return Unbounded_String;
+
+   procedure Trim (Source : in out Unbounded_String;
+                   Side   : in Trim_End);
+
+   function Trim (Source : in Unbounded_String;
+                  Left   : in Maps.Character_Set;
+                  Right  : in Maps.Character_Set) return Unbounded_String;
+
+   procedure Trim (Source : in out Unbounded_String;
+                   Left   : in Maps.Character_Set;
+                   Right  : in Maps.Character_Set);
+
+   function Head (Source : in Unbounded_String;
+                  Count  : in Natural;
+                  Pad    : in Character := Space) return Unbounded_String;
+
+   procedure Head (Source : in out Unbounded_String;
+                   Count  : in Natural;
+                   Pad    : in Character := Space);
+
+   function Tail (Source : in Unbounded_String;
+                  Count  : in Natural;
+                  Pad    : in Character := Space) return Unbounded_String;
+
+   procedure Tail (Source : in out Unbounded_String;
+                   Count  : in Natural;
+                   Pad    : in Character := Space);
+
+   function "*" (Left  : in Natural;
+                 Right : in Character) return Unbounded_String;
+
+   function "*" (Left  : in Natural;
+                 Right : in String)    return Unbounded_String;
+
+   function "*" (Left  : in Natural;
+                 Right : in Unbounded_String) return Unbounded_String;
+
+-- ========================================================
+-- UNBOUNDED STRING TO PROCESS EXAMPLES   
+-- ========================================================
+
+IMPORTANT: https://stackoverflow.com/questions/22854765/string-handling-in-ada
+
+#6 ==> offsZ : float; -- (Offset in X-axiz)  
+#7 ==> offsY : float; -- (Offset in Y-axiz)
+#8 ==> offsZ : float; -- (Offset in Z-axiz)
+ 
+#10 = 1.0 : float; (XY Scale factor)
+#11 = 1.0 : float; (Z Scale factor)
+
+prevLine : ASU.Unbounded_String;
+currLine : ASU.Unbounded_String;
+nextLine : ASU.Unbounded_String;
+
+Single variables
+========================
+prevX, prevY, prevZ, prevI, prevJ, prevK, prevF  : Float;
+currX, currY, currZ, currI, currJ, currK, currF  : Float;
+
+
+Array of floats
+========================
+(prevX, prevY, prevZ, prevI, prevJ, prevK, prevF) : Float
+(currX, currY, currZ, currI, currJ, currK, currF) : Float;
+(nextX, nextY, nextZ, nextI, nextJ, nextK, nextF) : Float;
+
+LINEAR SEGMENTS FLOATS (Can be used to calculate velocity)
+========================
+back_diffX := (currX - prevX)
+forw_diffX := (nextX - currX)
+....
+....
+back_diffF := (currF - prevF)
+forw_diffF := (nextF - currF)
+
+Array of Actions
+========================
+back_Action = (back_diffX, back_diffY ..., back_diffF) : Float;
+forw_Action = (forw_diffX, forw_diffY ..., forw_diffF)  : Float;
+
+
+Create a matrix FOR ANALYSES later (Write to text file) 
+Analyses can be done in parallel - independent calculations x-calcs, y-calcs etc
+before forming parallel tasks. x-y-z-f motions
+Calculations for
+velX, velY, velZ , spedX, spedY, spedZ , spinF for prev, curr and next
+
+======================================================
+4-dim matrix
+matr_Gcode = ()
+
+
+
+
+========================
+In G-code NGC:
+(1) Capitalize all x, y, z, i, j, k, f,
+(2) First fix "F [" to become "F[" with no space. Same for  x, y, z, i, j, k
+(3) For each currLine, separate each token X[177.132933*#10+#6] for all X, Y, Z ... F
+(4) If missing token_X , use currX := prevX; And so on.
+(5) If exists   
+
+(6) Convert string/UBstring numerics to floats and write into arrays
+
+-- =============================
+G00 X[0.0000] Y[0.0000]
+
+G00 Z[5.000000*#11+#8]
+G00 X[177.132933*#10+#6] Y[124.749177*#10+#7]
+G01 X[135.500299*#10+#6] Y[124.749177*#10+#7] Z[1.000000*#11+#8] F [#21]   
+
+G01 X[21.978950*#10+#6] Y[124.749177*#10+#7] Z[1.000000*#11+#8] F [#21]
+G02 X[25.284914*#10+#6] Y[123.622793*#10+#7] Z[1.000000*#11+#8] I[-0.000000*#10] J[-5.414732*#10]
+
+G01 X[63.629037*#10+#6] Y[112.478025*#10+#7] Z[1.000000*#11+#8] F [#21]
+G03 X[61.482236*#10+#6] Y[115.083647*#10+#7] Z[1.000000*#11+#8] I[-23.639512*#10] J[-17.289660*#10]
+   
+G00 X[0.0000] Y[0.0000]   
+
+-- ============================
+                     
+                     
