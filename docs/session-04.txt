@@ -239,3 +239,6 @@ wruslan@HPEliteBook8470p-Ub2004-rt38:~/github-ump/ada-dynamically-sized-fixed-ar
 13 directories, 84 files
 wruslan@HPEliteBook8470p-Ub2004-rt38:~/github-ump/ada-dynamically-sized-fixed-arrays$ 
 
+===========================================================
+
+
