@@ -1,0 +1,141 @@
+V "GNAT Lib v9"
+M P W=b
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_FLOATING_POINT
+RV NO_IO
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U main_ada_dynamically_sized_fixed_3d_arrays%b  main_ada_dynamically_sized_fixed_3d_arrays.adb  d4c2007a NE OO SU IL
+W ada%s			ada.ads			ada.ali
+W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.real_time%s	a-reatim.adb		a-reatim.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W pkg_ada_date_time_stamp%s  pkg_ada_date_time_stamp.adb  pkg_ada_date_time_stamp.ali
+W pkg_ada_dynsized_fixed3d_arrays%s  pkg_ada_dynsized_fixed3d_arrays.adb  pkg_ada_dynsized_fixed3d_arrays.ali
+W pkg_ada_random_numbers%s  pkg_ada_random_numbers.adb  pkg_ada_random_numbers.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+D ada.ads		20200312110721 76789da1 ada%s
+D a-charac.ads		20200312110721 2d3ec45b ada.characters%s
+D a-chlat1.ads		20200312110721 66457d31 ada.characters.latin_1%s
+D a-except.ads		20200312110721 291912d5 ada.exceptions%s
+D a-finali.ads		20200312110721 bf4f806b ada.finalization%s
+D a-flteio.ads		20200312110721 e18a47a0 ada.float_text_io%s
+D a-inteio.ads		20200312110721 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20200312110721 e4a01f64 ada.io_exceptions%s
+D a-reatim.ads		20200312110721 0240fc73 ada.real_time%s
+D a-stream.ads		20200312110721 119b8fb3 ada.streams%s
+D a-string.ads		20200312110721 90ac6797 ada.strings%s
+D a-strmap.ads		20200312110721 e8bb714a ada.strings.maps%s
+D a-strunb.ads		20200312110721 8098c91f ada.strings.unbounded%s
+D a-tags.ads		20200312110721 491b781d ada.tags%s
+D a-textio.ads		20200312110721 881db35a ada.text_io%s
+D a-tiflio.ads		20200312110721 56fbda09 ada.text_io.float_io%s
+D a-tiinio.ads		20200312110721 aa04e5d6 ada.text_io.integer_io%s
+D a-unccon.ads		20200312110721 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20200312110721 5ab55268 interfaces%s
+D i-c.ads		20200312110721 5421119b interfaces.c%s
+D i-cstrea.ads		20200312110721 e53d8b8e interfaces.c_streams%s
+D main_ada_dynamically_sized_fixed_3d_arrays.adb  20210302183838 5f03489a main_ada_dynamically_sized_fixed_3d_arrays%b
+D pkg_ada_date_time_stamp.ads  20210301031058 5a08c1e6 pkg_ada_date_time_stamp%s
+D pkg_ada_dynsized_fixed3d_arrays.ads  20210302183013 2cef9228 pkg_ada_dynsized_fixed3d_arrays%s
+D pkg_ada_random_numbers.ads  20210301063901 60ba9a03 pkg_ada_random_numbers%s
+D system.ads		20200312110721 4635ec04 system%s
+D s-atacco.ads		20200312110721 4c36d12f system.address_to_access_conversions%s
+D s-atocou.ads		20200312110721 b45c2d8d system.atomic_counters%s
+D s-crtl.ads		20200312110721 0ebbdb71 system.crtl%s
+D s-exctab.ads		20200312110721 54135002 system.exception_table%s
+D s-ficobl.ads		20200312110721 078245e4 system.file_control_block%s
+D s-finmas.ads		20200312110721 7811a767 system.finalization_masters%s
+D s-finroo.ads		20200312110721 4ff27390 system.finalization_root%s
+D s-linux.ads		20200312110721 ed0b8aee system.linux%s
+D s-multip.ads		20200312110721 38ac9f73 system.multiprocessors%s
+D s-oscons.ads		20200808120453 0b994636 system.os_constants%s
+D s-osinte.ads		20200312110721 710cf8c6 system.os_interface%s
+D s-parame.ads		20200312110721 48ec542b system.parameters%s
+D s-secsta.ads		20200312110721 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20200312110721 a7318a92 system.soft_links%s
+D s-stache.ads		20200312110721 a37c21ec system.stack_checking%s
+D s-stausa.ads		20200312110721 017a0a05 system.stack_usage%s
+D s-stalib.ads		20200312110721 09bd3940 system.standard_library%s
+D s-stoele.ads		20200312110721 2dc34a04 system.storage_elements%s
+D s-stopoo.ads		20200312110721 b16154c2 system.storage_pools%s
+D s-stposu.ads		20200312110721 97a6219c system.storage_pools.subpools%s
+D s-stratt.ads		20200312110721 aedef97e system.stream_attributes%s
+D s-tasinf.ads		20200312110721 2b3f8252 system.task_info%s
+D s-taspri.ads		20200312110721 f40ac08d system.task_primitives%s
+D s-taprop.ads		20200312110721 1dd2e1b6 system.task_primitives.operations%s
+D s-taskin.ads		20200312110721 b9d612e2 system.tasking%s
+D s-traent.ads		20200312110721 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200312110721 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20200312110721 1b7d22d2 system.wch_con%s
+X 1 ada.ads
+16K9*Ada 20e8 22|7r6 8r6 9r6 10r6 10r25 26r30 27r30 28r30 29r30
+X 6 a-flteio.ads
+20K13*Float_Text_IO[16|46] 22|9w10 28r34
+X 7 a-inteio.ads
+18K13*Integer_Text_IO[17|46] 22|8w10 27r34
+X 9 a-reatim.ads
+39K13*Real_Time 185e18 22|10w10 10r29 29r34
+X 15 a-textio.ads
+49K13*Text_IO 471e16 22|7w10 26r34
+73I12*Field{integer}
+78I12*Number_Base{integer}
+166U14*New_Line 22|64s63 106s15 115s9 126s9
+242U14*Put 22|97s15 99s15 101s18 103s15
+263U14*Put_Line 22|62s24 63s24 64s9 69s9 70s9 118s9 126s24 127s24
+X 17 a-tiinio.ads
+48i4*Default_Width{15|73I12} 22|84m12[7|18] 112m12[7|18]
+49i4*Default_Base{15|78I12} 22|85m12[7|18] 113m12[7|18]
+66U14*Put 22|98s18[7|18] 100s18[7|18] 102s18[7|18] 104s21[7|18]
+67i7 Item{integer} 22|98r22[7|18] 100r22[7|18] 102r22[7|18]
+X 22 main_ada_dynamically_sized_fixed_3d_arrays.adb
+20U11*main_ada_dynamically_sized_fixed_3d_arrays 20b11 130l5 130t47
+26K12 ATIO=26:34 62r19 63r19 64r4 64r58 69r4 70r4 97r10 99r10 101r13 103r10
+. 106r10 115r4 118r4 126r4 126r19 127r19
+27K12 AIntTIO=27:34 84r4 85r4 98r10 100r10 102r10 104r13 112r4 113r4
+28K12 AFltTIO=28:34
+29K12 ART=29:34
+32K12 PADTS=32:28 62r4 63r4 127r4
+33K12 PARN=33:28 93r42
+36K12 PADF3D=36:27 52r25 52r53 56r25 56r53
+39i4 ret_integer{integer}
+40f4 ret_float{float}
+43i4 dim1_min{natural} 53r7 57r7 88r13
+43i29 dim1_max{natural} 53r17 57r17 88r25
+44i4 dim2_min{natural} 53r27 57r27 89r16
+44i29 dim2_max{natural} 53r37 57r37 89r28
+45i4 dim3_min{natural} 53r47 57r47 90r19
+45i29 dim3_max{natural} 53r57 57r57 90r31
+52a4 Array3D_Integer_01{24|28A9} 93r10 104r25
+56a4 Array3D_Float_01{24|37A9}
+88i8 I{integer} 93r30 98r30 104r45
+89i11 J{integer} 93r33 100r30 104r47
+90i14 K{integer} 93r36 102r30 104r49
+X 23 pkg_ada_date_time_stamp.ads
+14K9*pkg_ada_date_time_stamp 22|13w6 32r28 23|36e28
+22U14*dtstamp 22|62s10 63s10 127s10
+X 24 pkg_ada_dynsized_fixed3d_arrays.ads
+15K9*pkg_ada_dynsized_fixed3d_arrays 22|17w6 36r27 24|50e36
+28A9*typ_array3d_int(integer)<integer><integer><integer> 22|52r32
+31V13*get_array3d_integer{28A9} 22|52s60
+37A9*typ_array3d_float(float)<integer><integer><integer> 22|56r32
+40V13*get_array3d_float{37A9} 22|56s60
+X 25 pkg_ada_random_numbers.ads
+3K9*pkg_ada_random_numbers 22|14w6 33r28 25|33e27
+9V13*get_random_integer{integer} 22|93s47
+X 42 s-stausa.ads
+203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
+268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22
+

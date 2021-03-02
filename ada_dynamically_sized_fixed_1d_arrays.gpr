@@ -9,11 +9,12 @@ project ada_dynamically_sized_fixed_1d_arrays is
    for Object_Dir  use "obj";      -- NOTE: No parantheses
    for Exec_Dir    use "exec";     -- NOTE: No parantheses
    
-   for Main use ("main_ada_dynamically_sized_fixed_1d_arrays.adb");
+   for Main use      ("main_ada_dynamically_sized_fixed_1d_arrays.adb");
     
    -- ======== for gprbuild ===============================
    package Builder is
-      for Executable ("main_ada_dynamically_sized_fixed_1d_arrays.adb") use "main_ada_dynamically_sized_fixed_1d_arrays.adx";
+      for Executable ("main_ada_dynamically_sized_fixed_1d_arrays.adb") 
+                  use "main_ada_dynamically_sized_fixed_1d_arrays.adx";
    end Builder;
    
    -- ======== File naming ================================

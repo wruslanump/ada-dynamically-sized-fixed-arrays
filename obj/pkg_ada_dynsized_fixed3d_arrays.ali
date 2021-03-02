@@ -13,7 +13,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U pkg_ada_dynsized_fixed2d_arrays%b  pkg_ada_dynsized_fixed2d_arrays.adb  58fa4b18 OO PK IL
+U pkg_ada_dynsized_fixed3d_arrays%b  pkg_ada_dynsized_fixed3d_arrays.adb  b45fa9ee OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
@@ -21,7 +21,7 @@ W ada.text_io%s		a-textio.adb		a-textio.ali
 W pkg_ada_date_time_stamp%s  pkg_ada_date_time_stamp.adb  pkg_ada_date_time_stamp.ali
 Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 
-U pkg_ada_dynsized_fixed2d_arrays%s  pkg_ada_dynsized_fixed2d_arrays.ads  dd149ad5 EE NE OO PK IL
+U pkg_ada_dynsized_fixed3d_arrays%s  pkg_ada_dynsized_fixed3d_arrays.ads  ae37a744 EE NE OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 W ada.strings%s		a-string.ads		a-string.ali
@@ -47,8 +47,8 @@ D interfac.ads		20200312110721 5ab55268 interfaces%s
 D i-c.ads		20200312110721 5421119b interfaces.c%s
 D i-cstrea.ads		20200312110721 e53d8b8e interfaces.c_streams%s
 D pkg_ada_date_time_stamp.ads  20210301031058 5a08c1e6 pkg_ada_date_time_stamp%s
-D pkg_ada_dynsized_fixed2d_arrays.ads  20210301145657 5fccafb9 pkg_ada_dynsized_fixed2d_arrays%s
-D pkg_ada_dynsized_fixed2d_arrays.adb  20210301153238 23681fb9 pkg_ada_dynsized_fixed2d_arrays%b
+D pkg_ada_dynsized_fixed3d_arrays.ads  20210302183013 2cef9228 pkg_ada_dynsized_fixed3d_arrays%s
+D pkg_ada_dynsized_fixed3d_arrays.adb  20210302183655 bceec0de pkg_ada_dynsized_fixed3d_arrays%b
 D system.ads		20200312110721 4635ec04 system%s
 D s-atacco.ads		20200312110721 4c36d12f system.address_to_access_conversions%s
 D s-atocou.ads		20200312110721 b45c2d8d system.atomic_counters%s
@@ -92,35 +92,34 @@ X 14 a-textio.ads
 49K13*Text_IO 471e16 22|17w10 35r31
 X 20 pkg_ada_date_time_stamp.ads
 14K9*pkg_ada_date_time_stamp 36e28 22|22w6 41r27
-X 21 pkg_ada_dynsized_fixed2d_arrays.ads
-15K9*pkg_ada_dynsized_fixed2d_arrays 49l5 49e36 22|25b14 103l5 103t36
+X 21 pkg_ada_dynsized_fixed3d_arrays.ads
+15K9*pkg_ada_dynsized_fixed3d_arrays 50l5 50e36 22|25b14 93l5 93t36
 20K12*AART=20:29
 21K12*AASU=21:37
-27A9*typ_array2d_int(integer)<integer><integer> 30r41 22|53r41 56r24
-28V13*get_array2d_integer{27A9} 28>34 28>44 29>34 29>44 22|51b13 63l8 63t27
-28i34 dim1_min{natural} 22|51b34 56r41
-28i44 dim1_max{natural} 22|51b44 56r53
-29i34 dim2_min{natural} 22|52b34 57r41
-29i44 dim2_max{natural} 22|52b44 57r53
-32A9*typ_array2d_float(float)<integer><integer> 35r39 22|68r39 71r26
-33V13*get_array2d_float{32A9} 33>32 33>42 34>32 34>42 22|66b13 78l8 78t25
-33i32 dim1_min{natural} 22|66b32 71r45
-33i42 dim1_max{natural} 22|66b42 71r57
-34i32 dim2_min{natural} 22|67b32 72r45
-34i42 dim2_max{natural} 22|67b42 72r57
-38A9*typ_array2d_char(character)<integer><integer> 41r43 22|83r43 86r25
-39V13*get_array2d_character{38A9} 39>36 39>46 40>36 40>46 22|81b13 93l8 93t29
-39i36 dim1_min{natural} 22|81b36 86r43
-39i46 dim1_max{natural} 22|81b46 86r55
-40i36 dim2_min{natural} 22|82b36 87r43
-40i46 dim2_max{natural} 22|82b46 87r55
-X 22 pkg_ada_dynsized_fixed2d_arrays.adb
+28A9*typ_array3d_int(integer)<integer><integer><integer> 34r41 22|54r41 57r24
+31V13*get_array3d_integer{28A9} 31>34 31>44 32>34 32>44 33>34 33>44 22|51b13
+. 65l8 65t27
+31i34 dim1_min{natural} 22|51b34 57r41
+31i44 dim1_max{natural} 22|51b44 57r53
+32i34 dim2_min{natural} 22|52b34 58r41
+32i44 dim2_max{natural} 22|52b44 58r53
+33i34 dim3_min{natural} 22|53b34 59r41
+33i44 dim3_max{natural} 22|53b44 59r53
+37A9*typ_array3d_float(float)<integer><integer><integer> 43r41 22|71r39 74r26
+40V13*get_array3d_float{37A9} 40>34 40>44 41>34 41>44 42>34 42>44 22|68b13
+. 83l8 83t25
+40i34 dim1_min{natural} 22|68b32 74r45
+40i44 dim1_max{natural} 22|68b42 74r57
+41i34 dim2_min{natural} 22|69b32 75r45
+41i44 dim2_max{natural} 22|69b42 75r57
+42i34 dim3_min{natural} 22|70b32 76r45
+42i44 dim3_max{natural} 22|70b42 76r57
+X 22 pkg_ada_dynsized_fixed3d_arrays.adb
 35K12 ATIO=35:31
 36K12 AITIO=36:31
 41K12 PADTS=41:27
-56a10 Array2d_Int{21|27A9} 60r17
-71a10 Array2d_float{21|32A9} 75r17
-86a10 Array2d_char{21|38A9} 90r17
+57a10 Array3D_Int{21|28A9} 62r17
+74a10 Array3D_float{21|37A9} 80r17
 X 39 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22

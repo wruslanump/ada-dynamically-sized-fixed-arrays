@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
-<Locations>
-  <Project>
-    <vfs_file>/home/wruslan/github-ump/ada-dynamically-sized-fixed-arrays/ada_dynamically_sized_fixed_1d_arrays.gpr</vfs_file>
+<Locations >
+  <Project >
     <file_marker column=" 1" line=" 1" >
       <vfs_project>/home/wruslan/github-ump/ada-dynamically-sized-fixed-arrays/ada_dynamically_sized_fixed_1d_arrays.gpr</vfs_project>
       <vfs_file>/home/wruslan/github-ump/ada-dynamically-sized-fixed-arrays/src/main_ada_dynamically_sized_fixed_1d_arrays.adb</vfs_file>
