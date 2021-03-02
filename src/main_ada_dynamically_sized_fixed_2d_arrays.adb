@@ -58,16 +58,16 @@ begin  -- for procedure main
     -- This removes the need of 'Image for various variables
     -- TESTING "bbb2#1111110#"  FOR BINARY OUTPUT Base => 2 (GOOD)
          ATIO.Put ("TESTING: Decimal(126) = ");
-         -- ATIO.Put (" Binary(126) = ");
+         ATIO.Put (" Binary(126) = ");
          AIntTIO.Put(126, Width => 13, Base => 2);  -- Min for base
          
-         -- ATIO.Put (" Octal(126) = ");
+         ATIO.Put (" Octal(126) = ");
          AIntTIO.Put(126, Width => 13, Base => 8);
          
-         -- ATIO.Put (" Decimal(126) = ");
+         ATIO.Put (" Decimal(126) = ");
          AIntTIO.Put(126, Width => 13, Base => 10);
          
-         -- ATIO.Put (" Hex(126) = ");
+         ATIO.Put (" Hex(126) = ");
          AIntTIO.Put(126, Width => 13, Base => 16); -- Max for Base
          ATIO.New_Line;
    

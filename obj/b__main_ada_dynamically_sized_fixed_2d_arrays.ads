@@ -37,7 +37,7 @@ package ada_main is
    pragma Export (C, main, "main");
 
    type Version_32 is mod 2 ** 32;
-   u00001 : constant Version_32 := 16#b3590fa4#;
+   u00001 : constant Version_32 := 16#e1f5bca1#;
    pragma Export (C, u00001, "main_ada_dynamically_sized_fixed_2d_arraysB");
    u00002 : constant Version_32 := 16#050ff2f0#;
    pragma Export (C, u00002, "system__standard_libraryB");
