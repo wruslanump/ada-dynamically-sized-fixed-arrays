@@ -1,0 +1,29 @@
+[GENERATED OBJECT FILE]
+b__main_ada_dynamically_sized_fixed_1d_arrays.o
+[PROJECT FILES]
+/home/wruslan/github-ump/ada-dynamically-sized-fixed-arrays/ada_dynamically_sized_fixed_1d_arrays.gpr
+20210302141247
+[BOUND OBJECT FILES]
+/home/wruslan/github-ump/ada-dynamically-sized-fixed-arrays/obj/pkg_ada_date_time_stamp.o
+/home/wruslan/github-ump/ada-dynamically-sized-fixed-arrays/obj/pkg_ada_dynsized_fixed1d_arrays.o
+/home/wruslan/github-ump/ada-dynamically-sized-fixed-arrays/obj/pkg_ada_dynsized_fixed2d_arrays.o
+/home/wruslan/github-ump/ada-dynamically-sized-fixed-arrays/obj/pkg_ada_random_numbers.o
+/home/wruslan/github-ump/ada-dynamically-sized-fixed-arrays/obj/main_ada_dynamically_sized_fixed_1d_arrays.o
+[GENERATED SOURCE FILES]
+b__main_ada_dynamically_sized_fixed_1d_arrays.ads
+b__main_ada_dynamically_sized_fixed_1d_arrays.adb
+b__main_ada_dynamically_sized_fixed_1d_arrays.ali
+[RESULTING OPTIONS]
+-L/home/wruslan/github-ump/ada-dynamically-sized-fixed-arrays/obj/
+-L/home/wruslan/github-ump/ada-dynamically-sized-fixed-arrays/obj/
+-L/usr/lib/gcc/x86_64-linux-gnu/9/adalib/
+-shared
+-shared-libgcc
+-lgnarl-9
+-lgnat-9
+-lpthread
+-lrt
+-ldl
+[RUN PATH OPTION]
+/usr/lib/gcc/x86_64-linux-gnu/9/adalib/
+/usr/lib

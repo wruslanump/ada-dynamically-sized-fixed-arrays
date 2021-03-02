@@ -12,7 +12,7 @@ with Ada.Real_Time; use Ada.Real_Time;
 -- IMPORT USER-DEFINED ADA PACKAGES
 with pkg_ada_date_time_stamp;
 with pkg_ada_random_numbers;
--- with pkg_ada_dynsized_fixed1d_arrays;
+with pkg_ada_dynsized_fixed1d_arrays;
 with pkg_ada_dynsized_fixed2d_arrays;
 -- with pkg_ada_dynsized_fixed3d_arrays;
 
@@ -31,23 +31,23 @@ is
    -- RENAME USER-DEFINED ADA PACKAGES FOR CONVENIENCE
    package PADTS   renames pkg_ada_date_time_stamp;
    package PARN    renames pkg_ada_random_numbers;
-   -- package PADF1D renames pkg_ada_dynsized_fixed1d_arrays;
-   package PADF2D renames pkg_ada_dynsized_fixed2d_arrays;
+   package PADF1D  renames pkg_ada_dynsized_fixed1d_arrays;
+   -- package PADF2D renames pkg_ada_dynsized_fixed2d_arrays;
    -- package PADF3D renames pkg_ada_dynsized_fixed3d_arrays;
    
    -- VARIABLES AND CONSTANTS IN MAIN
    ret_integer : Integer := 999;
    ret_float   : Float   := 999.999;
    
-   dim1min : Natural := 1; dim1max : Natural := 4;
-   dim2min : Natural := 3; dim2max : Natural := 7;
+   dim1min : Natural := 1; dim1max : Natural := 7;
+   
    
    -- All 2D array elements initialized to zero during creation
    -- in function implementation (body of PADF2D package)
    -- Create a 2D array
-   Array2D_Integer_01 : PADF2D.typ_array2d_int   := PADF2D.get_array2d_integer   (dim1min, dim1max, dim2min, dim2max);
-   Array2D_Float_01   : PADF2D.typ_array2d_float := PADF2D.get_array2d_float     (dim1min, dim1max, dim2min, dim2max);
-   Array2D_Char_01    : PADF2D.typ_array2d_char  := PADF2D.get_array2d_character (dim1min, dim1max, dim2min, dim2max);
+   Array1D_Integer_01 : PADF1D.typ_array1d_int   := PADF1D.get_array1d_integer   (dim1min, dim1max);
+   Array1D_Float_01   : PADF1D.typ_array1d_float := PADF1D.get_array1d_float     (dim1min, dim1max);
+   Array1D_Char_01    : PADF1D.typ_array1d_char  := PADF1D.get_array1d_character (dim1min, dim1max);
    
 begin  -- for procedure main
    
@@ -55,27 +55,25 @@ begin  -- for procedure main
    PADTS.dtstamp; ATIO.Put_Line ("Running inside GNAT Studio Community");
    ATIO.Put_Line ("MAIN PROGRAM STARTED SUCCESSFULLY."); ATIO.New_Line;
    
-    -- This removes the need of 'Image for various variables
-    -- TESTING "bbb2#1111110#"  FOR BINARY OUTPUT Base => 2 (GOOD)
-         ATIO.Put ("TESTING: Decimal(126) = ");
+   -- TESTING: This removes the need of 'Image for various variables
+   
+         -- ATIO.Put ("TESTING: Decimal(126) = ");
          -- ATIO.Put (" Binary(126) = ");
-         AIntTIO.Put(126, Width => 13, Base => 2);  -- Min for base
+         -- AIntTIO.Put(126, Width => 13, Base => 2);  -- Min for base
          
          -- ATIO.Put (" Octal(126) = ");
-         AIntTIO.Put(126, Width => 13, Base => 8);
+         -- AIntTIO.Put(126, Width => 13, Base => 8);
          
          -- ATIO.Put (" Decimal(126) = ");
-         AIntTIO.Put(126, Width => 13, Base => 10);
+         -- AIntTIO.Put(126, Width => 13, Base => 10);
          
          -- ATIO.Put (" Hex(126) = ");
-         AIntTIO.Put(126, Width => 13, Base => 16); -- Max for Base
-         ATIO.New_Line;
-   
-   -- END TESTING
-   
-   -- Test (1) Array2D_Integer_01 
+         -- AIntTIO.Put(126, Width => 13, Base => 16); -- Max for Base
+         -- ATIO.New_Line;
+      
+   -- Test (1) Array1D_Integer_01 
    ATIO.Put_Line ("========================================================");
-   ATIO.Put_Line ("(1) TESTING Array2D_Integer_01 (1..4, 3..7) assignments.");
+   ATIO.Put_Line ("(1) TESTING Array1D_Integer_01 (1..7) assignments of random integer (-10, +10).");
    
    -- REF: http://www.ada-auth.org/standards/12rm/html/RM-A-10-8.html
    -- For AIntTIO, the NORMAL DEFAULT: 
@@ -94,90 +92,82 @@ begin  -- for procedure main
    
    -- Execute the loop
    for I in dim1min .. dim1max loop
-      for J in dim2min .. dim2max loop 
-         
+             
          -- Execute get random integer
-         Array2D_Integer_01 (I, J) := PARN.get_random_integer (-10, +10);
+         Array1D_Integer_01 (I) := PARN.get_random_integer (-10, +10);
          
+         -- NOT USING Integer'Image()
          -- The original using 'Image REPLACED BELOW
-         -- ATIO.Put_Line ("Array2D_Integer_01 (" & 
-         --               Integer'Image (I) & "," & 
-         --               Integer'Image (J) & ") = " &
-         --               Integer'Image(Array2D_Integer_01 (I,J))); 
          
-         -- THE REPLACEMENT
-         ATIO.Put ("Array2D_Integer_01 ("); 
-         AIntTIO.Put(Item => I); 
-         ATIO.Put(",");
-         AIntTIO.Put(Item => J); 
+         -- THIS WORKS USING ATIO
+         -- ATIO.Put_Line ("Array1D_Integer_01 (" & 
+         --               Integer'Image (I) & " ) = " &       
+         --               Integer'Image(Array1D_Integer_01 (I))); 
+         
+         -- THE REPLACEMENT USING AIntTIO ALSO WORKS
+         ATIO.Put ("Array1D_Integer_01 ("); 
+         AIntTIO.Put(Item => I);                  -- Using AIntTIO not ATIO
          ATIO.Put(") = ");
-         AIntTIO.Put(Array2D_Integer_01 (I,J));
+         AIntTIO.Put(Array1D_Integer_01 (I));     -- Using AIntTIO not ATIO
          ATIO.New_Line;
-                      
-      end loop; -- END loop J
+   
    end loop; -- END loop I   
    
-   -- IMPT: RESET Integer width to NORMAL DEFAULT VALUES
+   -- IMPT: RESET Integer width to NORMAL DEFAULT VALUES (AIntTIO not ATIO)_
    AIntTIO.Default_Width := 8;  
    AIntTIO.Default_Base  := 10; -- Decimal
    
    ATIO.New_Line;
-   
-   -- Test (2) Array2D_Integer_02 
+ 
+   -- Test (2) Array1D_Integer_02 
    ATIO.Put_Line ("========================================================");
-   -- Assume variables changes for dim1min, dim1max, dim2min, dim2max
-   ATIO.Put_Line ("(2) TESTING Array2D_Integer_02 (dim1min, dim1max, dim2min, dim2max)) assignments.");
    
+   -- Assume variables changes for dim1min, dim1max
+   ATIO.Put_Line ("(2) TESTING Array1D_Integer_02 (dim1min, dim1max) assignments.");
+   ATIO.Put_Line ("Values of (dim1min, dim1max) are DYNAMIC. Ha ha ha");
    -- NOTE: Outside of declare, change array range variables (WORKING GOOD) 
    -- This makes dynamically sized fixed arrays. Ha ha ha. 
-   dim1min := 1; dim1max := 6; dim2min := 1; dim2max := 4;
+   
+   -- SET values of (dim1min, dim1max) programmatically (dynamic)
+   dim1min := 1; dim1max := 12;
       
    declare   
-      -- Create a new 2D array
+      -- Create a new 1D array
       -- Initialized to zero during creation
-      Array2D_Integer_02 : PADF2D.typ_array2d_int := PADF2D.get_array2d_integer (dim1min, dim1max, dim2min, dim2max);
+      Array1D_Integer_02 : PADF1D.typ_array1d_int := PADF1D.get_array1d_integer (dim1min, dim1max);
    
    begin -- for declare section INTEGER
           
-      -- Index for 2D array is (row, col)
-      ATIO.Put_Line ("Array2D_Integer_02 (2, 3) = " & Integer'Image (Array2D_Integer_02 (2, 3))); 
-      ATIO.Put_Line ("Array2D_Integer_02 (5, 4) = " & Integer'Image (Array2D_Integer_02 (5, 4))); 
-      
-      -- ATIO.Put_Line ("TESTING REMOVE Integer'Image()");
-      -- AITIO.Put (Array2D_Integer_02 (2, 3), Array2D_Integer_02 (5, 4) );
-      -- ATIO.New_Line;
-      
-      -- Assign values to array elements
-      Array2D_Integer_02 (2, 2) := 2055;
-      ATIO.Put_Line ("Array2D_Integer_02 (2, 2) = " & Integer'Image (Array2D_Integer_02 (2, 2))); 
-      
-      Array2D_Integer_02 (3, 4) := PARN.get_random_integer(100, 200);
-      ATIO.Put_Line ("Array2D_Integer_02 (3, 4) = " & Integer'Image (Array2D_Integer_02 (3, 4))); 
-      ATIO.New_Line;
-      
-      -- ATIO.Put_Line ("TESTING REMOVE Integer'Image()");
-      -- AITIO.Put (Array2D_Integer_02 (2, 2), Array2D_Integer_02 (3, 4) );
-      
-      for I in dim1min .. dim1max loop
-         for J in dim2min .. dim2max loop 
+      -- Index for 1 array is (row)
+      ATIO.Put_Line ("Array1D_Integer_02 (1) = " & Integer'Image (Array1D_Integer_02 (1))); 
+      ATIO.Put_Line ("Array1D_Integer_02 (3) = " & Integer'Image (Array1D_Integer_02 (3))); 
           
-         ATIO.Put_Line ("Array2D_Integer_02 (" & 
-                        Integer'Image (I) & "," & 
-                        Integer'Image (J) & ") = " &
-                        Integer'Image(Array2D_Integer_02 (I,J))); 
-         
-         end loop; -- END loop J
+      -- Assign values to array elements
+      Array1D_Integer_02 (1) := 2055;
+      ATIO.Put_Line ("Array1D_Integer_02 (1) = " & Integer'Image (Array1D_Integer_02 (1))); 
+      
+      Array1D_Integer_02 (3) := PARN.get_random_integer(100, 200);
+      ATIO.Put_Line ("Array1D_Integer_02 (3) = " & Integer'Image (Array1D_Integer_02 (3))); 
+      ATIO.New_Line;
+              
+      for I in dim1min .. dim1max loop
+               
+         ATIO.Put_Line ("Array1D_Integer_02 (" & 
+                        Integer'Image (I) & ")" & 
+                        Integer'Image(Array1D_Integer_02 (I))); 
+                 
       end loop; -- END loop I   
       ATIO.New_Line;
       
-   end; -- END declare section INTEGER  
+   end; -- END declare section   
    
-   -- Test (3) Array2D_Float_01 
+   -- Test (3) Array1D_Float_01 
    ATIO.Put_Line ("========================================================");
-   ATIO.Put_Line ("(3) TESTING Array2D_Float_01 (1..4, 3..7) assignments.");
+   ATIO.Put_Line ("(3) TESTING Array1D_Float_01 (1..6) assignments of random float (-100.0, +100.0)");
    
-      -- RESET package-wise variables because was changed in Test (2)
-      dim1min := 1; dim1max := 4; dim2min := 3; dim2max := 7;
+   -- RESET package-wise variables because was changed in Test (2)
+   -- DYNAMIC ASSIGNMENT
+      dim1min := 1; dim1max := 6;
       
       -- SET DECIMAL WIDTH BEFORE LOOP
       AIntTIO.Default_Width := 3;  -- Integer width
@@ -199,32 +189,25 @@ begin  -- for procedure main
    
       -- EXECUTE LOOP
       for I in dim1min .. dim1max loop
-          for J in dim2min .. dim2max loop 
-         
-          Array2D_Float_01 (I, J) := PARN.get_random_float (-10.0, +10.0);
-         
-         -- WORKING BUT USING 'Image
-         -- ATIO.Put_Line ("Array2D_Float_01 (" & 
-         --               Integer'Image (I) & "," & 
-         --               Integer'Image (J) & ") = " &
-         --               Float'Image(Array2D_Float_01 (I,J))); 
-         
-         -- DISPLAY LINES WITHOUT USING 'Image AS ABOVE
-         ATIO.Put ("Array2D_Float_01 (" );
-         AIntTIO.Put(Item => I); 
-         ATIO.Put(",");
-         AIntTIO.Put(Item => J); 
-         ATIO.Put(") = ");
-         -- NOW USING FLOAT 
+          
+          -- Assign random float number number to 1D-array
+          Array1D_Float_01 (I) := PARN.get_random_float (-100.0, +100.0);
+           
+         -- FLOAT FORMATTING SPECIFICATIONS 
          -- Format based on distance to referred to decimal point
          -- Fore = before decimal point
          -- Aft  = after decimal point
          -- Exp  = width of exponent (including + and - sign)
-         AFltTIO.Put(Item => Array2D_Float_01 (I,J),
-                    Fore => 3, Aft => 10, Exp => 4);  
+      
+      
+         ATIO.Put ("Array1D_Float_01 (" );
+      -- Using AIntTIO for Integer
+         AIntTIO.Put(Item => I);              
+         ATIO.Put(") = ");
+      -- Using AFltTIO for Float
+         AFltTIO.Put(Item => Array1D_Float_01 (I), Fore => 3, Aft => 10, Exp => 4);  
          ATIO.New_Line;
        
-         end loop; -- END loop J
    end loop; -- END loop I 
    
    -- RESET AFTER LOOP
@@ -232,110 +215,104 @@ begin  -- for procedure main
    AIntTIO.Default_Base  := 10; -- Decimal
    ATIO.New_Line;
    
-    -- Test (4) Array2D_Float_02 
+    -- Test (4) Array1D_Float_02 
    ATIO.Put_Line ("========================================================");
-   ATIO.Put_Line ("(4) TESTING Array2D_Float_02 (1..6, 1..4) assignments.");   
+   ATIO.Put_Line ("(4) TESTING Array1D_Float_02 (3..10) assignments.");   
   
-   dim1min := 1; dim1max := 6; dim2min := 1; dim2max := 4;
+   -- DYNAMIC ASSIGNMENT FOR ARRAY INDEX (ARRAY SIZE)
+   dim1min := 3; dim1max := 10;  -- Array size is 7 elements
       
-   declare
-      -- Create a new 2D array
-      -- Initialized to zero during creation
-      Array2D_Float_02 : PADF2D.typ_array2d_float := PADF2D.get_array2d_float (dim1min, dim1max, dim2min, dim2max);
+   declare  -- start section declare for FLOAT
+      
+      -- Create a new 1D array. Initialized to zero during creation
+      Array1D_Float_02 : PADF1D.typ_array1d_float := PADF1D.get_array1d_float (dim1min, dim1max);
    
-   begin -- for declare section FLOAT
+   begin    -- declare section begin for FLOAT
           
-      -- Index for 2D array is (row, col)
-      ATIO.Put_Line ("Array2D_Float_02 (2, 3) = " & Float'Image (Array2D_Float_02 (2, 3))); 
-      ATIO.Put_Line ("Array2D_Float_02 (5, 4) = " & Float'Image (Array2D_Float_02 (5, 4))); 
+     -- ARRAY INDEX MUST BE BETWEEN dim1min := 3; dim1max := 10;
+      ATIO.Put_Line ("Array1D_Float_02 (5) = " & Float'Image (Array1D_Float_02 (5))); 
+      ATIO.Put_Line ("Array1D_Float_02 (8) = " & Float'Image (Array1D_Float_02 (8))); 
       
       -- Assign values to array elements
-      Array2D_Float_02 (2, 2) := 12.756;
-      ATIO.Put_Line ("Array2D_Float_02 (2, 2) = " & Float'Image (Array2D_Float_02 (2, 2))); 
+      Array1D_Float_02 (4) := 12.756;
+      ATIO.Put_Line ("Array1D_Float_02 (9) = " & Float'Image (Array1D_Float_02 (9))); 
       
-      Array2D_Float_02 (3, 4) := PARN.get_random_float (22.25, 32.25);
-      ATIO.Put_Line ("Array2D_Float_02 (3, 4) = " & Float'Image (Array2D_Float_02 (3, 4))); 
+      Array1D_Float_02 (7) := PARN.get_random_float (22.25, 32.25);
+      ATIO.Put_Line ("Array1D_Float_02 (7) = " & Float'Image (Array1D_Float_02 (7))); 
       ATIO.New_Line;
       
       for I in dim1min .. dim1max loop
-         for J in dim2min .. dim2max loop 
-          
-         ATIO.Put_Line ("Array2D_Float_02 (" & 
-                        Integer'Image (I) & "," & 
-                        Integer'Image (J) & ") = " &
-                        Float'Image(Array2D_Float_02 (I,J))); 
+             
+         ATIO.Put_Line ("Array1D_Float_02 (" & 
+                        Integer'Image (I) & ") = " & 
+                        Float'Image(Array1D_Float_02 (I))); 
          
-         end loop; -- END loop J
       end loop; -- END loop I   
       ATIO.New_Line;
       
-   end; -- END declare section FLOAT     
+   end; -- END declare section for FLOAT     
    
    -- Test (5) Array2D_Char_01 
    ATIO.Put_Line ("========================================================");
-   ATIO.Put_Line ("(5) TESTING Array2D_Char_01 (1..4, 3..7) assignments.");
+   ATIO.Put_Line ("(5) TESTING Array2D_Char_01 (1..4) assignments.");
    
       -- RESET package-wise variables because was changed in Test (2)
-      dim1min := 1; dim1max := 4; dim2min := 3; dim2max := 7;
+      dim1min := 1; dim1max := 4; 
       
       for I in dim1min .. dim1max loop
-          for J in dim2min .. dim2max loop 
+          -- for J in dim2min .. dim2max loop 
           
          if (I rem 2 = 0) then
-             Array2D_Char_01 (I, J) := 'E'; -- Even number assign char E
+             Array1D_Char_01 (I) := 'E'; -- Even number assign char E
          elsif (I rem 2 = 1) then
-             Array2D_Char_01 (I, J) := 'O'; -- Odd number assign char O
+             Array1D_Char_01 (I) := 'O'; -- Odd number assign char O
          else
              ATIO.Put_line ("PROBLEMO WITH Even/Odd integers");
          end if;    
             
-         ATIO.Put_Line ("Array2D_Char_01 (" & 
-                        Integer'Image (I) & "," & 
-                        Integer'Image (J) & ") = " &
-                        Character'Image(Array2D_Char_01 (I,J))); 
+         ATIO.Put_Line ("Array1D_Char_01 (" & 
+                        Integer'Image (I) & ") = " & 
+                        Character'Image(Array1D_Char_01 (I))); 
          
-          end loop; -- END loop J
+          -- end loop; -- END loop J
       end loop; -- END loop I   
    ATIO.New_Line;
    
    -- Test (6) Array2D_Char_02 
    ATIO.Put_Line ("========================================================");
-   ATIO.Put_Line ("(6) TESTING Array2D_Char_02 (1..6, 3..4) assignments.");
+   ATIO.Put_Line ("(6) TESTING Array2D_Char_02 (1..6) assignments.");
       
-        dim1min := 1; dim1max := 6; dim2min := 1; dim2max := 4;
+        dim1min := 1; dim1max := 6; 
       
-   declare
-      -- Create a new 2D array
-      -- Initialized to ' ' whitespace during creation
-      Array2D_Char_02 : PADF2D.typ_array2d_char := PADF2D.get_array2d_character (dim1min, dim1max, dim2min, dim2max);
+   declare  -- START declare section for CHAR
+      
+      -- Create a new 1D array of characters
+      -- Initialize to ' ' whitespace during creation
+      Array1D_Char_02 : PADF1D.typ_array1d_char := PADF1D.get_array1d_character (dim1min, dim1max);
    
-   begin -- for declare section CHAR
-          
-      -- Index for 2D array is (row, col)
-      ATIO.Put_Line ("Array2D_Char_02 (2, 3) = " & Character'Image (Array2D_Char_02 (2, 3))); 
-      ATIO.Put_Line ("Array2D_Char_02 (5, 4) = " & Character'Image (Array2D_Char_02 (5, 4))); 
+   begin    --  declare section for CHAR
+     
+      ATIO.Put_Line ("Array1D_Char_02 (2) = " & Character'Image (Array1D_Char_02 (2))); 
+      ATIO.Put_Line ("Array1D_Char_02 (5) = " & Character'Image (Array1D_Char_02 (5))); 
       
       -- Assign values to array elements
-      Array2D_Char_02 (2, 2) := 'W';
-      ATIO.Put_Line ("Array2D_Char_02 (2, 2) = " & Character'Image (Array2D_Char_02 (2, 2))); 
+      Array1D_Char_02 (2) := 'W';
+      ATIO.Put_Line ("Array1D_Char_02 (2) = " & Character'Image (Array1D_Char_02 (2))); 
       
-      Array2D_Char_02 (3, 4) := 'R';
-      ATIO.Put_Line ("Array2D_Char_02 (3, 4) = " & Character'Image (Array2D_Char_02 (3, 4))); 
+      Array1D_Char_02 (3) := 'R';
+      ATIO.Put_Line ("Array1D_Char_02 (3) = " & Character'Image (Array1D_Char_02 (3))); 
       ATIO.New_Line;
       
       for I in dim1min .. dim1max loop
-         for J in dim2min .. dim2max loop 
-          
-         ATIO.Put_Line ("Array2D_Char_02 (" & 
-                        Integer'Image (I) & "," & 
-                        Integer'Image (J) & ") = " &
-                        Character'Image(Array2D_Char_02 (I,J))); 
-         
-         end loop; -- END loop J
+      
+         ATIO.Put_Line ("Array1D_Char_02 (" & 
+                        Integer'Image (I) & ") = " & 
+                        Character'Image(Array1D_Char_02 (I))); 
+      
       end loop; -- END loop I   
       ATIO.New_Line;
       
-   end; -- END declare section CHAR        
+   end; -- END declare section for CHAR        
    -- =====================================================       
       
    ATIO.New_Line; ATIO.Put_Line ("MAIN PROGRAM TERMINATED SUCCESSFULLY.");

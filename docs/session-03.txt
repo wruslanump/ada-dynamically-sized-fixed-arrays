@@ -297,5 +297,60 @@ wruslan@HPEliteBook8470p-Ub2004-rt38:~/github-ump/ada-dynamically-sized-fixed-ar
 wruslan@HPEliteBook8470p-Ub2004-rt38:~/github-ump/ada-dynamically-sized-fixed-arrays$ 
 
 ===========================================================
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github-ump/ada-dynamically-sized-fixed-arrays$ git add .
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github-ump/ada-dynamically-sized-fixed-arrays$ git commit -m "finished pkg-dynsized-fixed2d-arrays"
+[master 6ea5ab5] finished pkg-dynsized-fixed2d-arrays
+ 35 files changed, 3403 insertions(+), 126 deletions(-)
+ create mode 100644 ada_dynamically_sized_fixed_1d_arrays.gpr
+ rename ada_dynamically_sized_fixed_arrays.gpr => ada_dynamically_sized_fixed_2d_arrays.gpr (78%)
+ create mode 100644 ada_dynamically_sized_fixed_3d_arrays.gpr
+ delete mode 100644 docs/Ada-Notes-01.txt
+ rename docs/references/{reference-01.txt => About-2D-arrays-reference.txt} (97%)
+ create mode 100644 docs/references/About-AIntTIO-AFltTIO-AStrTIO.txt
+ create mode 100644 docs/references/About-Ada-String-Unbounded-ASU.txt
+ create mode 100644 docs/references/About-ada-code-split-line.txt
+ create mode 100644 docs/references/About-overrun-ada-real-time.txt
+ create mode 100644 docs/references/Ada-Replace-Type-Image.txt
+ create mode 100644 docs/session-03.txt
+ create mode 100755 exec/main_ada_dynamically_sized_fixed_2d_arrays.adx
+ rewrite exec/main_ada_dynamically_sized_fixed_arrays.adx (79%)
+ create mode 100644 obj/b__main_ada_dynamically_sized_fixed_2d_arrays.adb
+ create mode 100644 obj/b__main_ada_dynamically_sized_fixed_2d_arrays.ads
+ create mode 100644 obj/b__main_ada_dynamically_sized_fixed_2d_arrays.ali
+ create mode 100644 obj/b__main_ada_dynamically_sized_fixed_2d_arrays.o
+ rename obj/{main_ada_dynamically_sized_fixed_arrays.adb.stderr => main_ada_dynamically_sized_fixed_2d_arrays.adb.stderr} (100%)
+ rename obj/{main_ada_dynamically_sized_fixed_arrays.adb.stdout => main_ada_dynamically_sized_fixed_2d_arrays.adb.stdout} (100%)
+ rename obj/{main_ada_dynamically_sized_fixed_arrays.ali => main_ada_dynamically_sized_fixed_2d_arrays.ali} (54%)
+ create mode 100644 obj/main_ada_dynamically_sized_fixed_2d_arrays.bexch
+ rename obj/{main_ada_dynamically_sized_fixed_arrays.cswi => main_ada_dynamically_sized_fixed_2d_arrays.cswi} (53%)
+ create mode 100644 obj/main_ada_dynamically_sized_fixed_2d_arrays.o
+ delete mode 100644 obj/main_ada_dynamically_sized_fixed_arrays.o
+ create mode 100644 src/main_ada_dynamically_sized_fixed_1d_arrays.adb
+ create mode 100644 src/main_ada_dynamically_sized_fixed_2d_arrays.adb
+ 
+===========================================================
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github-ump/ada-dynamically-sized-fixed-arrays$ git push origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/wruslanump/ada-dynamically-sized-fixed-arrays.git'
 
+===========================================================
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github-ump/ada-dynamically-sized-fixed-arrays$ git push origin master
+Username for 'https://github.com': wruslanump
+Password for 'https://wruslanump@github.com': 
+Enumerating objects: 48, done.
+Counting objects: 100% (48/48), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (34/34), done.
+Writing objects: 100% (35/35), 53.20 KiB | 3.32 MiB/s, done.
+Total 35 (delta 18), reused 0 (delta 0)
+remote: Resolving deltas: 100% (18/18), completed with 10 local objects.
+To https://github.com/wruslanump/ada-dynamically-sized-fixed-arrays.git
+   929cd47..6ea5ab5  master -> master
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github-ump/ada-dynamically-sized-fixed-arrays$ 
+
+===========================================================
+ALHAMDULILLAH 3 TIMES.
+===========================================================
+
+===========================================================
 
