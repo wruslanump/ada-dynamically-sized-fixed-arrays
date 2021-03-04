@@ -1,0 +1,316 @@
+gprbuild -d -P/home/wruslan/github-ump/ada-dynamically-sized-fixed-arrays/ada_dynamically_sized_fixed_3d_arrays.gpr -s -k
+Compile
+   [Ada]          main_ada_dynamically_sized_fixed_3d_arrays.adb
+   [Ada]          pkg_ada_date_time_stamp.adb
+   [Ada]          pkg_ada_dynsized_fixed3d_arrays.adb
+   [Ada]          pkg_ada_random_numbers.adb
+Bind
+   [gprbind]      main_ada_dynamically_sized_fixed_3d_arrays.bexch
+   [Ada]          main_ada_dynamically_sized_fixed_3d_arrays.ali
+Link
+   [link]         main_ada_dynamically_sized_fixed_3d_arrays.adb
+[2021-03-04 19:25:02] process terminated successfully, elapsed time: 01.34s
+
+/home/wruslan/github-ump/ada-dynamically-sized-fixed-arrays/exec/main_ada_dynamically_sized_fixed_3d_arrays.adx
+2021-03-04 11:25:04.74988379159 Bismillah 3 times WRY
+2021-03-04 11:25:04.74988398197 Running inside GNAT Studio Community
+MAIN PROGRAM STARTED SUCCESSFULLY.
+
+========================================================
+(1) TESTING Array3D_Integer_01 (1..4, 3..7, 6..8)) assignments.
+Array3D_Integer_01 (  1,  3,  6) =   8
+Array3D_Integer_01 (  1,  3,  7) =  -3
+Array3D_Integer_01 (  1,  3,  8) =  -5
+Array3D_Integer_01 (  1,  4,  6) =  -9
+Array3D_Integer_01 (  1,  4,  7) =   3
+Array3D_Integer_01 (  1,  4,  8) =  -2
+Array3D_Integer_01 (  1,  5,  6) =  -8
+Array3D_Integer_01 (  1,  5,  7) =   3
+Array3D_Integer_01 (  1,  5,  8) =   2
+Array3D_Integer_01 (  1,  6,  6) =  -4
+Array3D_Integer_01 (  1,  6,  7) =   8
+Array3D_Integer_01 (  1,  6,  8) =  -8
+Array3D_Integer_01 (  1,  7,  6) =   8
+Array3D_Integer_01 (  1,  7,  7) =   2
+Array3D_Integer_01 (  1,  7,  8) =   2
+Array3D_Integer_01 (  2,  3,  6) =  -1
+Array3D_Integer_01 (  2,  3,  7) =  -3
+Array3D_Integer_01 (  2,  3,  8) =  -8
+Array3D_Integer_01 (  2,  4,  6) =   6
+Array3D_Integer_01 (  2,  4,  7) =  -1
+Array3D_Integer_01 (  2,  4,  8) =   5
+Array3D_Integer_01 (  2,  5,  6) =  10
+Array3D_Integer_01 (  2,  5,  7) =  -2
+Array3D_Integer_01 (  2,  5,  8) =  -5
+Array3D_Integer_01 (  2,  6,  6) =  -4
+Array3D_Integer_01 (  2,  6,  7) =   2
+Array3D_Integer_01 (  2,  6,  8) =  -8
+Array3D_Integer_01 (  2,  7,  6) =  -4
+Array3D_Integer_01 (  2,  7,  7) =  -1
+Array3D_Integer_01 (  2,  7,  8) =   7
+Array3D_Integer_01 (  3,  3,  6) =   6
+Array3D_Integer_01 (  3,  3,  7) =   4
+Array3D_Integer_01 (  3,  3,  8) =   3
+Array3D_Integer_01 (  3,  4,  6) =   5
+Array3D_Integer_01 (  3,  4,  7) =   0
+Array3D_Integer_01 (  3,  4,  8) =  -4
+Array3D_Integer_01 (  3,  5,  6) =  -6
+Array3D_Integer_01 (  3,  5,  7) =   8
+Array3D_Integer_01 (  3,  5,  8) =  -1
+Array3D_Integer_01 (  3,  6,  6) =   0
+Array3D_Integer_01 (  3,  6,  7) =   9
+Array3D_Integer_01 (  3,  6,  8) =   2
+Array3D_Integer_01 (  3,  7,  6) =   1
+Array3D_Integer_01 (  3,  7,  7) =   7
+Array3D_Integer_01 (  3,  7,  8) =  10
+Array3D_Integer_01 (  4,  3,  6) =   7
+Array3D_Integer_01 (  4,  3,  7) =   4
+Array3D_Integer_01 (  4,  3,  8) =   9
+Array3D_Integer_01 (  4,  4,  6) =   7
+Array3D_Integer_01 (  4,  4,  7) =  -3
+Array3D_Integer_01 (  4,  4,  8) =  -2
+Array3D_Integer_01 (  4,  5,  6) =   0
+Array3D_Integer_01 (  4,  5,  7) =   4
+Array3D_Integer_01 (  4,  5,  8) =   2
+Array3D_Integer_01 (  4,  6,  6) =   6
+Array3D_Integer_01 (  4,  6,  7) =  -8
+Array3D_Integer_01 (  4,  6,  8) =   4
+Array3D_Integer_01 (  4,  7,  6) =   9
+Array3D_Integer_01 (  4,  7,  7) =   3
+Array3D_Integer_01 (  4,  7,  8) =  -4
+
+========================================================
+(2) TESTING Array3D_Float_01 (2..5, 4..6, 7..8) assignments.
+Array3D_Float_01 (  2,  4,  7) =   7.5439167023E+00
+Array3D_Float_01 (  2,  4,  8) =   4.6111469269E+00
+Array3D_Float_01 (  2,  5,  7) =  -3.2951827049E+00
+Array3D_Float_01 (  2,  5,  8) =  -3.7374825478E+00
+Array3D_Float_01 (  2,  6,  7) =   1.8659734726E+00
+Array3D_Float_01 (  2,  6,  8) =  -4.3160438538E-02
+Array3D_Float_01 (  3,  4,  7) =   7.2363758087E+00
+Array3D_Float_01 (  3,  4,  8) =  -3.4884734154E+00
+Array3D_Float_01 (  3,  5,  7) =   6.9035301208E+00
+Array3D_Float_01 (  3,  5,  8) =  -4.0124554634E+00
+Array3D_Float_01 (  3,  6,  7) =  -1.8969717026E+00
+Array3D_Float_01 (  3,  6,  8) =  -1.2321033478E+00
+Array3D_Float_01 (  4,  4,  7) =   4.7500782013E+00
+Array3D_Float_01 (  4,  4,  8) =   8.3719367981E+00
+Array3D_Float_01 (  4,  5,  7) =  -8.2566728592E+00
+Array3D_Float_01 (  4,  5,  8) =   2.9609584808E+00
+Array3D_Float_01 (  4,  6,  7) =  -6.8288769722E+00
+Array3D_Float_01 (  4,  6,  8) =   3.4823036194E+00
+Array3D_Float_01 (  5,  4,  7) =   4.7621297836E+00
+Array3D_Float_01 (  5,  4,  8) =  -2.6066799164E+00
+Array3D_Float_01 (  5,  5,  7) =  -8.6402130127E-01
+Array3D_Float_01 (  5,  5,  8) =  -6.8114438057E+00
+Array3D_Float_01 (  5,  6,  7) =   8.5984573364E+00
+Array3D_Float_01 (  5,  6,  8) =   9.4990539551E-01
+
+========================================================
+(3) TESTING Array3D_Float_02 (1..6, 1..4, 1..3) assignments.
+Array3D_Float_01 (  1,  1,  1) =   1.0615444183E+00
+Array3D_Float_01 (  1,  1,  2) =   3.7855577469E+00
+Array3D_Float_01 (  1,  1,  3) =  -4.0770835876E+00
+Array3D_Float_01 (  1,  2,  1) =  -4.3743176460E+00
+Array3D_Float_01 (  1,  2,  2) =   4.0414667130E+00
+Array3D_Float_01 (  1,  2,  3) =  -2.9300804138E+00
+Array3D_Float_01 (  1,  3,  1) =   8.7934188843E+00
+Array3D_Float_01 (  1,  3,  2) =  -4.4584722519E+00
+Array3D_Float_01 (  1,  3,  3) =  -9.3004093170E+00
+Array3D_Float_01 (  1,  4,  1) =   3.0382938385E+00
+Array3D_Float_01 (  1,  4,  2) =   8.1850528717E-01
+Array3D_Float_01 (  1,  4,  3) =   7.1260337830E+00
+Array3D_Float_01 (  2,  1,  1) =  -3.3497471809E+00
+Array3D_Float_01 (  2,  1,  2) =   3.4565048218E+00
+Array3D_Float_01 (  2,  1,  3) =   2.4461250305E+00
+Array3D_Float_01 (  2,  2,  1) =   2.6789970398E+00
+Array3D_Float_01 (  2,  2,  2) =  -8.5065746307E-01
+Array3D_Float_01 (  2,  2,  3) =  -7.5484838486E+00
+Array3D_Float_01 (  2,  3,  1) =  -1.7181196213E+00
+Array3D_Float_01 (  2,  3,  2) =  -9.3522634506E+00
+Array3D_Float_01 (  2,  3,  3) =   1.9727134705E+00
+Array3D_Float_01 (  2,  4,  1) =  -3.3245391846E+00
+Array3D_Float_01 (  2,  4,  2) =  -3.6819691658E+00
+Array3D_Float_01 (  2,  4,  3) =   8.6846389771E+00
+Array3D_Float_01 (  3,  1,  1) =  -7.1644225121E+00
+Array3D_Float_01 (  3,  1,  2) =  -2.5716490746E+00
+Array3D_Float_01 (  3,  1,  3) =   2.9491710663E+00
+Array3D_Float_01 (  3,  2,  1) =   7.9478225708E+00
+Array3D_Float_01 (  3,  2,  2) =   5.2066116333E+00
+Array3D_Float_01 (  3,  2,  3) =  -5.4619731903E+00
+Array3D_Float_01 (  3,  3,  1) =  -3.6129565239E+00
+Array3D_Float_01 (  3,  3,  2) =  -1.3777513504E+00
+Array3D_Float_01 (  3,  3,  3) =  -8.7990055084E+00
+Array3D_Float_01 (  3,  4,  1) =  -7.1075406075E+00
+Array3D_Float_01 (  3,  4,  2) =  -3.5306806564E+00
+Array3D_Float_01 (  3,  4,  3) =   7.2654247284E+00
+Array3D_Float_01 (  4,  1,  1) =   7.0353507996E-01
+Array3D_Float_01 (  4,  1,  2) =  -7.8209843636E+00
+Array3D_Float_01 (  4,  1,  3) =   1.9528722763E+00
+Array3D_Float_01 (  4,  2,  1) =   1.6437149048E+00
+Array3D_Float_01 (  4,  2,  2) =   8.9914283752E+00
+Array3D_Float_01 (  4,  2,  3) =   7.4991226196E+00
+Array3D_Float_01 (  4,  3,  1) =   3.4835700989E+00
+Array3D_Float_01 (  4,  3,  2) =   1.2506561279E+00
+Array3D_Float_01 (  4,  3,  3) =  -6.1113824844E+00
+Array3D_Float_01 (  4,  4,  1) =  -8.7009677887E+00
+Array3D_Float_01 (  4,  4,  2) =  -2.0551586151E-01
+Array3D_Float_01 (  4,  4,  3) =   8.7213859558E+00
+Array3D_Float_01 (  5,  1,  1) =  -2.7920217514E+00
+Array3D_Float_01 (  5,  1,  2) =  -8.4269323349E+00
+Array3D_Float_01 (  5,  1,  3) =  -5.8608260155E+00
+Array3D_Float_01 (  5,  2,  1) =  -9.3730297089E+00
+Array3D_Float_01 (  5,  2,  2) =  -6.6741657257E-01
+Array3D_Float_01 (  5,  2,  3) =   9.5533924103E+00
+Array3D_Float_01 (  5,  3,  1) =   7.6544589996E+00
+Array3D_Float_01 (  5,  3,  2) =   1.2631559372E+00
+Array3D_Float_01 (  5,  3,  3) =  -9.3165102005E+00
+Array3D_Float_01 (  5,  4,  1) =   3.2935333252E-01
+Array3D_Float_01 (  5,  4,  2) =   7.0218658447E+00
+Array3D_Float_01 (  5,  4,  3) =   8.2587337494E+00
+Array3D_Float_01 (  6,  1,  1) =   1.7420530319E+00
+Array3D_Float_01 (  6,  1,  2) =  -8.9884910583E+00
+Array3D_Float_01 (  6,  1,  3) =   4.6509552002E-01
+Array3D_Float_01 (  6,  2,  1) =   1.7883377075E+00
+Array3D_Float_01 (  6,  2,  2) =  -7.3555531502E+00
+Array3D_Float_01 (  6,  2,  3) =   1.6992616653E+00
+Array3D_Float_01 (  6,  3,  1) =   6.5124130249E+00
+Array3D_Float_01 (  6,  3,  2) =  -8.1252679825E+00
+Array3D_Float_01 (  6,  3,  3) =   4.9563884735E-01
+Array3D_Float_01 (  6,  4,  1) =   2.5479488373E+00
+Array3D_Float_01 (  6,  4,  2) =   4.8502731323E+00
+Array3D_Float_01 (  6,  4,  3) =  -5.5846595764E-01
+
+
+MAIN PROGRAM TERMINATED SUCCESSFULLY.
+2021-03-04 11:25:04.74992655806 Alhamdulillah 3 times WRY
+[2021-03-04 19:25:04] process terminated successfully, elapsed time: 00.23s
+
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github-ump/ada-dynamically-sized-fixed-arrays$ ls -al
+total 52
+drwxrwxr-x  9 wruslan wruslan 4096 Mar  3 01:49 .
+drwxrwxr-x 14 wruslan wruslan 4096 Mar  1 17:08 ..
+-rw-rw-r--  1 wruslan wruslan 1616 Mar  3 01:49 ada_dynamically_sized_fixed_1d_arrays.gpr
+-rw-rw-r--  1 wruslan wruslan 1616 Mar  3 01:46 ada_dynamically_sized_fixed_2d_arrays.gpr
+-rw-rw-r--  1 wruslan wruslan 1611 Mar  3 01:45 ada_dynamically_sized_fixed_3d_arrays.gpr
+drwxrwxr-x  4 wruslan wruslan 4096 Mar  4 19:27 docs
+drwxrwxr-x  2 wruslan wruslan 4096 Mar  4 19:25 exec
+drwxrwxr-x  2 wruslan wruslan 4096 Mar  1 10:48 figures
+drwxrwxr-x  2 wruslan wruslan 4096 Mar  1 10:47 files
+drwxrwxr-x  8 wruslan wruslan 4096 Mar  4 19:24 .git
+drwxrwxr-x  2 wruslan wruslan 4096 Mar  4 19:25 obj
+-rw-rw-r--  1 wruslan wruslan   93 Mar  1 17:05 README.md
+drwxrwxr-x  7 wruslan wruslan 4096 Mar  4 19:24 src
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github-ump/ada-dynamically-sized-fixed-arrays$ 
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github-ump/ada-dynamically-sized-fixed-arrays$ tree ./
+./
+├── ada_dynamically_sized_fixed_1d_arrays.gpr
+├── ada_dynamically_sized_fixed_2d_arrays.gpr
+├── ada_dynamically_sized_fixed_3d_arrays.gpr
+├── docs
+│   ├── references
+│   │   ├── About-2D-arrays-reference.txt
+│   │   ├── About-ada-code-split-line.txt
+│   │   ├── About-Ada-String-Unbounded-ASU.txt
+│   │   ├── About-AIntTIO-AFltTIO-AStrTIO.txt
+│   │   ├── About-overrun-ada-real-time.txt
+│   │   └── Ada-Replace-Type-Image.txt
+│   ├── session-01.txt
+│   ├── session-02.txt
+│   ├── session-03.txt
+│   ├── session-04.txt
+│   ├── session-05.txt
+│   ├── session-06.txt
+│   ├── session-07.txt
+│   └── templates
+│       ├── full_ada_dynamic_arrays.gpr
+│       ├── main_ada_dynamic_arrays.adb
+│       └── simplified_ada_dynamic_arrays.gpr
+├── exec
+│   ├── main_ada_dynamically_sized_fixed_1d_arrays.adx
+│   ├── main_ada_dynamically_sized_fixed_2d_arrays.adx
+│   └── main_ada_dynamically_sized_fixed_3d_arrays.adx
+├── figures
+├── files
+├── obj
+│   ├── ada_dynamically_sized_fixed_1d_arrays-loc.xml
+│   ├── ada_dynamically_sized_fixed_2d_arrays-loc.xml
+│   ├── ada_dynamically_sized_fixed_3d_arrays-loc.xml
+│   ├── ada_dynamically_sized_fixed_arrays-loc.xml
+│   ├── ada_dynamic_arrays-loc.xml
+│   ├── b__main_ada_dynamically_sized_fixed_1d_arrays.adb
+│   ├── b__main_ada_dynamically_sized_fixed_1d_arrays.ads
+│   ├── b__main_ada_dynamically_sized_fixed_1d_arrays.ali
+│   ├── b__main_ada_dynamically_sized_fixed_1d_arrays.o
+│   ├── b__main_ada_dynamically_sized_fixed_2d_arrays.adb
+│   ├── b__main_ada_dynamically_sized_fixed_2d_arrays.ads
+│   ├── b__main_ada_dynamically_sized_fixed_2d_arrays.ali
+│   ├── b__main_ada_dynamically_sized_fixed_2d_arrays.o
+│   ├── b__main_ada_dynamically_sized_fixed_3d_arrays.adb
+│   ├── b__main_ada_dynamically_sized_fixed_3d_arrays.ads
+│   ├── b__main_ada_dynamically_sized_fixed_3d_arrays.ali
+│   ├── b__main_ada_dynamically_sized_fixed_3d_arrays.o
+│   ├── b__main_ada_dynamically_sized_fixed_arrays.adb
+│   ├── b__main_ada_dynamically_sized_fixed_arrays.ads
+│   ├── b__main_ada_dynamically_sized_fixed_arrays.ali
+│   ├── b__main_ada_dynamically_sized_fixed_arrays.o
+│   ├── b__main_ada_dynamic_arrays.adb
+│   ├── b__main_ada_dynamic_arrays.ads
+│   ├── b__main_ada_dynamic_arrays.ali
+│   ├── b__main_ada_dynamic_arrays.o
+│   ├── gpsauto.cgpr
+│   ├── main_ada_dynamically_sized_fixed_1d_arrays.bexch
+│   ├── main_ada_dynamically_sized_fixed_2d_arrays.bexch
+│   ├── main_ada_dynamically_sized_fixed_3d_arrays.adb.stderr
+│   ├── main_ada_dynamically_sized_fixed_3d_arrays.adb.stdout
+│   ├── main_ada_dynamically_sized_fixed_3d_arrays.ali
+│   ├── main_ada_dynamically_sized_fixed_3d_arrays.bexch
+│   ├── main_ada_dynamically_sized_fixed_3d_arrays.cswi
+│   ├── main_ada_dynamically_sized_fixed_3d_arrays.o
+│   ├── main_ada_dynamically_sized_fixed_arrays.bexch
+│   ├── main_ada_dynamic_arrays.adb.stderr
+│   ├── main_ada_dynamic_arrays.adb.stdout
+│   ├── main_ada_dynamic_arrays.ali
+│   ├── main_ada_dynamic_arrays.bexch
+│   ├── main_ada_dynamic_arrays.o
+│   ├── pkg_ada_date_time_stamp.adb.stderr
+│   ├── pkg_ada_date_time_stamp.adb.stdout
+│   ├── pkg_ada_date_time_stamp.ali
+│   ├── pkg_ada_date_time_stamp.cswi
+│   ├── pkg_ada_date_time_stamp.o
+│   ├── pkg_ada_dynsized_fixed3d_arrays.adb.stderr
+│   ├── pkg_ada_dynsized_fixed3d_arrays.adb.stdout
+│   ├── pkg_ada_dynsized_fixed3d_arrays.ali
+│   ├── pkg_ada_dynsized_fixed3d_arrays.cswi
+│   ├── pkg_ada_dynsized_fixed3d_arrays.o
+│   ├── pkg_ada_random_numbers.adb.stderr
+│   ├── pkg_ada_random_numbers.adb.stdout
+│   ├── pkg_ada_random_numbers.ali
+│   ├── pkg_ada_random_numbers.cswi
+│   └── pkg_ada_random_numbers.o
+├── README.md
+└── src
+    ├── main_ada_dynamically_sized_fixed_1d_arrays.adb
+    ├── main_ada_dynamically_sized_fixed_2d_arrays.adb
+    ├── main_ada_dynamically_sized_fixed_3d_arrays.adb
+    ├── pkg-ada-date-time-stamp
+    │   ├── pkg_ada_date_time_stamp.adb
+    │   └── pkg_ada_date_time_stamp.ads
+    ├── pkg-ada-random-numbers
+    │   ├── pkg_ada_random_numbers.adb
+    │   └── pkg_ada_random_numbers.ads
+    ├── pkg-dynsized-fixed1d-arrays
+    │   ├── pkg_ada_dynsized_fixed1d_arrays.adb
+    │   └── pkg_ada_dynsized_fixed1d_arrays.ads
+    ├── pkg-dynsized-fixed2d-arrays
+    │   ├── pkg_ada_dynsized_fixed2d_arrays.adb
+    │   └── pkg_ada_dynsized_fixed2d_arrays.ads
+    └── pkg-dynsized-fixed3d-arrays
+        ├── pkg_ada_dynsized_fixed3d_arrays.adb
+        └── pkg_ada_dynsized_fixed3d_arrays.ads
+
+13 directories, 91 files
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github-ump/ada-dynamically-sized-fixed-arrays$ 
+
+===========================================================
+

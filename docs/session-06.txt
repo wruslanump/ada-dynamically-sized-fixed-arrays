@@ -1,0 +1,229 @@
+
+/home/wruslan/github-ump/ada-dynamically-sized-fixed-arrays/exec/main_ada_dynamically_sized_fixed_3d_arrays.adx
+2021-03-02 18:45:54.05551869543 Bismillah 3 times WRY
+2021-03-02 18:45:54.05551888140 Running inside GNAT Studio Community
+MAIN PROGRAM STARTED SUCCESSFULLY.
+
+========================================================
+(1) TESTING Array3D_Integer_01 (1..4, 3..7, 6..8)) assignments.
+Array3D_Integer_01 (  1,  3,  6) =   7
+Array3D_Integer_01 (  1,  3,  7) =   4
+Array3D_Integer_01 (  1,  3,  8) = -10
+Array3D_Integer_01 (  1,  4,  6) =   1
+Array3D_Integer_01 (  1,  4,  7) =   0
+Array3D_Integer_01 (  1,  4,  8) =   2
+Array3D_Integer_01 (  1,  5,  6) =   7
+Array3D_Integer_01 (  1,  5,  7) =  -1
+Array3D_Integer_01 (  1,  5,  8) = -10
+Array3D_Integer_01 (  1,  6,  6) =   2
+Array3D_Integer_01 (  1,  6,  7) =  -1
+Array3D_Integer_01 (  1,  6,  8) =  -9
+Array3D_Integer_01 (  1,  7,  6) =   4
+Array3D_Integer_01 (  1,  7,  7) =  -4
+Array3D_Integer_01 (  1,  7,  8) =  -8
+Array3D_Integer_01 (  2,  3,  6) =  -1
+Array3D_Integer_01 (  2,  3,  7) =   8
+Array3D_Integer_01 (  2,  3,  8) =   9
+Array3D_Integer_01 (  2,  4,  6) =  -7
+Array3D_Integer_01 (  2,  4,  7) =   1
+Array3D_Integer_01 (  2,  4,  8) =   1
+Array3D_Integer_01 (  2,  5,  6) =  -7
+Array3D_Integer_01 (  2,  5,  7) =   6
+Array3D_Integer_01 (  2,  5,  8) =  -6
+Array3D_Integer_01 (  2,  6,  6) =   1
+Array3D_Integer_01 (  2,  6,  7) =   0
+Array3D_Integer_01 (  2,  6,  8) =  -6
+Array3D_Integer_01 (  2,  7,  6) =  -6
+Array3D_Integer_01 (  2,  7,  7) =  -4
+Array3D_Integer_01 (  2,  7,  8) =   7
+Array3D_Integer_01 (  3,  3,  6) =  10
+Array3D_Integer_01 (  3,  3,  7) =  -5
+Array3D_Integer_01 (  3,  3,  8) =   3
+Array3D_Integer_01 (  3,  4,  6) =   2
+Array3D_Integer_01 (  3,  4,  7) =   6
+Array3D_Integer_01 (  3,  4,  8) =  -6
+Array3D_Integer_01 (  3,  5,  6) =  -3
+Array3D_Integer_01 (  3,  5,  7) =  -6
+Array3D_Integer_01 (  3,  5,  8) =   8
+Array3D_Integer_01 (  3,  6,  6) =  -4
+Array3D_Integer_01 (  3,  6,  7) =   3
+Array3D_Integer_01 (  3,  6,  8) =  -4
+Array3D_Integer_01 (  3,  7,  6) =  -7
+Array3D_Integer_01 (  3,  7,  7) =   4
+Array3D_Integer_01 (  3,  7,  8) =  -7
+Array3D_Integer_01 (  4,  3,  6) =   3
+Array3D_Integer_01 (  4,  3,  7) =   0
+Array3D_Integer_01 (  4,  3,  8) =  10
+Array3D_Integer_01 (  4,  4,  6) =   5
+Array3D_Integer_01 (  4,  4,  7) =  -8
+Array3D_Integer_01 (  4,  4,  8) =  -5
+Array3D_Integer_01 (  4,  5,  6) =  -4
+Array3D_Integer_01 (  4,  5,  7) =  10
+Array3D_Integer_01 (  4,  5,  8) =   3
+Array3D_Integer_01 (  4,  6,  6) =  -4
+Array3D_Integer_01 (  4,  6,  7) =  -6
+Array3D_Integer_01 (  4,  6,  8) =  -3
+Array3D_Integer_01 (  4,  7,  6) =  -5
+Array3D_Integer_01 (  4,  7,  7) =   8
+Array3D_Integer_01 (  4,  7,  8) =   5
+
+========================================================
+
+MAIN PROGRAM TERMINATED SUCCESSFULLY.
+2021-03-02 18:45:54.05553502708 Alhamdulillah 3 times WRY
+[2021-03-03 02:45:54] process terminated successfully, elapsed time: 00.20s
+
+===========================================================
+
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github-ump/ada-dynamically-sized-fixed-arrays$ git add .
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github-ump/ada-dynamically-sized-fixed-arrays$ git commit -m "started pkg_ada_dynsized_fixed3d_arrays.adb"
+[master 3cb6064] started pkg_ada_dynsized_fixed3d_arrays.adb
+ 34 files changed, 2023 insertions(+), 237 deletions(-)
+ create mode 100755 exec/main_ada_dynamically_sized_fixed_3d_arrays.adx
+ create mode 100644 obj/ada_dynamically_sized_fixed_2d_arrays-loc.xml
+ create mode 100644 obj/ada_dynamically_sized_fixed_3d_arrays-loc.xml
+ create mode 100644 obj/b__main_ada_dynamically_sized_fixed_3d_arrays.adb
+ create mode 100644 obj/b__main_ada_dynamically_sized_fixed_3d_arrays.ads
+ create mode 100644 obj/b__main_ada_dynamically_sized_fixed_3d_arrays.ali
+ create mode 100644 obj/b__main_ada_dynamically_sized_fixed_3d_arrays.o
+ delete mode 100644 obj/main_ada_dynamically_sized_fixed_2d_arrays.ali
+ delete mode 100644 obj/main_ada_dynamically_sized_fixed_2d_arrays.o
+ rename obj/{main_ada_dynamically_sized_fixed_2d_arrays.adb.stderr => main_ada_dynamically_sized_fixed_3d_arrays.adb.stderr} (100%)
+ rename obj/{main_ada_dynamically_sized_fixed_2d_arrays.adb.stdout => main_ada_dynamically_sized_fixed_3d_arrays.adb.stdout} (100%)
+ create mode 100644 obj/main_ada_dynamically_sized_fixed_3d_arrays.ali
+ create mode 100644 obj/main_ada_dynamically_sized_fixed_3d_arrays.bexch
+ rename obj/{pkg_ada_dynsized_fixed2d_arrays.cswi => main_ada_dynamically_sized_fixed_3d_arrays.cswi} (53%)
+ create mode 100644 obj/main_ada_dynamically_sized_fixed_3d_arrays.o
+ delete mode 100644 obj/pkg_ada_dynsized_fixed2d_arrays.o
+ rename obj/{pkg_ada_dynsized_fixed2d_arrays.adb.stderr => pkg_ada_dynsized_fixed3d_arrays.adb.stderr} (100%)
+ rename obj/{pkg_ada_dynsized_fixed2d_arrays.adb.stdout => pkg_ada_dynsized_fixed3d_arrays.adb.stdout} (100%)
+ rename obj/{pkg_ada_dynsized_fixed2d_arrays.ali => pkg_ada_dynsized_fixed3d_arrays.ali} (73%)
+ rename obj/{main_ada_dynamically_sized_fixed_2d_arrays.cswi => pkg_ada_dynsized_fixed3d_arrays.cswi} (53%)
+ create mode 100644 obj/pkg_ada_dynsized_fixed3d_arrays.o
+ create mode 100644 src/main_ada_dynamically_sized_fixed_3d_arrays.adb
+ create mode 100644 src/pkg-dynsized-fixed3d-arrays/pkg_ada_dynsized_fixed3d_arrays.adb
+ create mode 100644 src/pkg-dynsized-fixed3d-arrays/pkg_ada_dynsized_fixed3d_arrays.ads
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github-ump/ada-dynamically-sized-fixed-arrays$ git push origin master
+Username for 'https://github.com': wruslanump
+Password for 'https://wruslanump@github.com': 
+Enumerating objects: 43, done.
+Counting objects: 100% (43/43), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (29/29), done.
+Writing objects: 100% (31/31), 57.07 KiB | 3.80 MiB/s, done.
+Total 31 (delta 16), reused 0 (delta 0)
+remote: Resolving deltas: 100% (16/16), completed with 11 local objects.
+To https://github.com/wruslanump/ada-dynamically-sized-fixed-arrays.git
+   25d7bbd..3cb6064  master -> master
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github-ump/ada-dynamically-sized-fixed-arrays$ ./tree
+bash: ./tree: No such file or directory
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github-ump/ada-dynamically-sized-fixed-arrays$ tree ./
+./
+├── ada_dynamically_sized_fixed_1d_arrays.gpr
+├── ada_dynamically_sized_fixed_2d_arrays.gpr
+├── ada_dynamically_sized_fixed_3d_arrays.gpr
+├── docs
+│   ├── references
+│   │   ├── About-2D-arrays-reference.txt
+│   │   ├── About-ada-code-split-line.txt
+│   │   ├── About-Ada-String-Unbounded-ASU.txt
+│   │   ├── About-AIntTIO-AFltTIO-AStrTIO.txt
+│   │   ├── About-overrun-ada-real-time.txt
+│   │   └── Ada-Replace-Type-Image.txt
+│   ├── session-01.txt
+│   ├── session-02txt
+│   ├── session-03.txt
+│   ├── session-04.txt
+│   ├── session-05.txt
+│   └── templates
+│       ├── full_ada_dynamic_arrays.gpr
+│       ├── main_ada_dynamic_arrays.adb
+│       └── simplified_ada_dynamic_arrays.gpr
+├── exec
+│   ├── main_ada_dynamically_sized_fixed_1d_arrays.adx
+│   ├── main_ada_dynamically_sized_fixed_2d_arrays.adx
+│   └── main_ada_dynamically_sized_fixed_3d_arrays.adx
+├── figures
+├── files
+├── obj
+│   ├── ada_dynamically_sized_fixed_1d_arrays-loc.xml
+│   ├── ada_dynamically_sized_fixed_2d_arrays-loc.xml
+│   ├── ada_dynamically_sized_fixed_3d_arrays-loc.xml
+│   ├── ada_dynamically_sized_fixed_arrays-loc.xml
+│   ├── ada_dynamic_arrays-loc.xml
+│   ├── b__main_ada_dynamically_sized_fixed_1d_arrays.adb
+│   ├── b__main_ada_dynamically_sized_fixed_1d_arrays.ads
+│   ├── b__main_ada_dynamically_sized_fixed_1d_arrays.ali
+│   ├── b__main_ada_dynamically_sized_fixed_1d_arrays.o
+│   ├── b__main_ada_dynamically_sized_fixed_2d_arrays.adb
+│   ├── b__main_ada_dynamically_sized_fixed_2d_arrays.ads
+│   ├── b__main_ada_dynamically_sized_fixed_2d_arrays.ali
+│   ├── b__main_ada_dynamically_sized_fixed_2d_arrays.o
+│   ├── b__main_ada_dynamically_sized_fixed_3d_arrays.adb
+│   ├── b__main_ada_dynamically_sized_fixed_3d_arrays.ads
+│   ├── b__main_ada_dynamically_sized_fixed_3d_arrays.ali
+│   ├── b__main_ada_dynamically_sized_fixed_3d_arrays.o
+│   ├── b__main_ada_dynamically_sized_fixed_arrays.adb
+│   ├── b__main_ada_dynamically_sized_fixed_arrays.ads
+│   ├── b__main_ada_dynamically_sized_fixed_arrays.ali
+│   ├── b__main_ada_dynamically_sized_fixed_arrays.o
+│   ├── b__main_ada_dynamic_arrays.adb
+│   ├── b__main_ada_dynamic_arrays.ads
+│   ├── b__main_ada_dynamic_arrays.ali
+│   ├── b__main_ada_dynamic_arrays.o
+│   ├── gpsauto.cgpr
+│   ├── main_ada_dynamically_sized_fixed_1d_arrays.bexch
+│   ├── main_ada_dynamically_sized_fixed_2d_arrays.bexch
+│   ├── main_ada_dynamically_sized_fixed_3d_arrays.adb.stderr
+│   ├── main_ada_dynamically_sized_fixed_3d_arrays.adb.stdout
+│   ├── main_ada_dynamically_sized_fixed_3d_arrays.ali
+│   ├── main_ada_dynamically_sized_fixed_3d_arrays.bexch
+│   ├── main_ada_dynamically_sized_fixed_3d_arrays.cswi
+│   ├── main_ada_dynamically_sized_fixed_3d_arrays.o
+│   ├── main_ada_dynamically_sized_fixed_arrays.bexch
+│   ├── main_ada_dynamic_arrays.adb.stderr
+│   ├── main_ada_dynamic_arrays.adb.stdout
+│   ├── main_ada_dynamic_arrays.ali
+│   ├── main_ada_dynamic_arrays.bexch
+│   ├── main_ada_dynamic_arrays.o
+│   ├── pkg_ada_date_time_stamp.adb.stderr
+│   ├── pkg_ada_date_time_stamp.adb.stdout
+│   ├── pkg_ada_date_time_stamp.ali
+│   ├── pkg_ada_date_time_stamp.cswi
+│   ├── pkg_ada_date_time_stamp.o
+│   ├── pkg_ada_dynsized_fixed3d_arrays.adb.stderr
+│   ├── pkg_ada_dynsized_fixed3d_arrays.adb.stdout
+│   ├── pkg_ada_dynsized_fixed3d_arrays.ali
+│   ├── pkg_ada_dynsized_fixed3d_arrays.cswi
+│   ├── pkg_ada_dynsized_fixed3d_arrays.o
+│   ├── pkg_ada_random_numbers.adb.stderr
+│   ├── pkg_ada_random_numbers.adb.stdout
+│   ├── pkg_ada_random_numbers.ali
+│   ├── pkg_ada_random_numbers.cswi
+│   └── pkg_ada_random_numbers.o
+├── README.md
+└── src
+    ├── main_ada_dynamically_sized_fixed_1d_arrays.adb
+    ├── main_ada_dynamically_sized_fixed_2d_arrays.adb
+    ├── main_ada_dynamically_sized_fixed_3d_arrays.adb
+    ├── pkg-ada-date-time-stamp
+    │   ├── pkg_ada_date_time_stamp.adb
+    │   └── pkg_ada_date_time_stamp.ads
+    ├── pkg-ada-random-numbers
+    │   ├── pkg_ada_random_numbers.adb
+    │   └── pkg_ada_random_numbers.ads
+    ├── pkg-dynsized-fixed1d-arrays
+    │   ├── pkg_ada_dynsized_fixed1d_arrays.adb
+    │   └── pkg_ada_dynsized_fixed1d_arrays.ads
+    ├── pkg-dynsized-fixed2d-arrays
+    │   ├── pkg_ada_dynsized_fixed2d_arrays.adb
+    │   └── pkg_ada_dynsized_fixed2d_arrays.ads
+    └── pkg-dynsized-fixed3d-arrays
+        ├── pkg_ada_dynsized_fixed3d_arrays.adb
+        └── pkg_ada_dynsized_fixed3d_arrays.ads
+
+13 directories, 89 files
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github-ump/ada-dynamically-sized-fixed-arrays$ 
+wruslan@HPEliteBook8470p-Ub2004-rt38:~/github-ump/ada-dynamically-sized-fixed-arrays$ 
+
+

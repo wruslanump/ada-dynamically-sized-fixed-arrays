@@ -202,24 +202,13 @@ begin  -- for procedure main
           for J in dim2min .. dim2max loop 
          
           Array2D_Float_01 (I, J) := PARN.get_random_float (-10.0, +10.0);
-         
-         -- WORKING BUT USING 'Image
-         -- ATIO.Put_Line ("Array2D_Float_01 (" & 
-         --               Integer'Image (I) & "," & 
-         --               Integer'Image (J) & ") = " &
-         --               Float'Image(Array2D_Float_01 (I,J))); 
-         
+                           
          -- DISPLAY LINES WITHOUT USING 'Image AS ABOVE
          ATIO.Put ("Array2D_Float_01 (" );
          AIntTIO.Put(Item => I); 
          ATIO.Put(",");
          AIntTIO.Put(Item => J); 
          ATIO.Put(") = ");
-         -- NOW USING FLOAT 
-         -- Format based on distance to referred to decimal point
-         -- Fore = before decimal point
-         -- Aft  = after decimal point
-         -- Exp  = width of exponent (including + and - sign)
          AFltTIO.Put(Item => Array2D_Float_01 (I,J),
                     Fore => 3, Aft => 10, Exp => 4);  
          ATIO.New_Line;
@@ -236,7 +225,8 @@ begin  -- for procedure main
    ATIO.Put_Line ("========================================================");
    ATIO.Put_Line ("(4) TESTING Array2D_Float_02 (1..6, 1..4) assignments.");   
   
-   dim1min := 1; dim1max := 6; dim2min := 1; dim2max := 4;
+   dim1min := 1; dim1max := 6; 
+   dim2min := 1; dim2max := 4;
       
    declare
       -- Create a new 2D array

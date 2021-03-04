@@ -14,7 +14,7 @@ RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U main_ada_dynamically_sized_fixed_3d_arrays%b  main_ada_dynamically_sized_fixed_3d_arrays.adb  d4c2007a NE OO SU IL
+U main_ada_dynamically_sized_fixed_3d_arrays%b  main_ada_dynamically_sized_fixed_3d_arrays.adb  c38995af NE OO SU IL
 W ada%s			ada.ads			ada.ali
 W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
@@ -47,7 +47,7 @@ D a-unccon.ads		20200312110721 0e9b276f ada.unchecked_conversion%s
 D interfac.ads		20200312110721 5ab55268 interfaces%s
 D i-c.ads		20200312110721 5421119b interfaces.c%s
 D i-cstrea.ads		20200312110721 e53d8b8e interfaces.c_streams%s
-D main_ada_dynamically_sized_fixed_3d_arrays.adb  20210302183838 5f03489a main_ada_dynamically_sized_fixed_3d_arrays%b
+D main_ada_dynamically_sized_fixed_3d_arrays.adb  20210304112449 4848dd4f main_ada_dynamically_sized_fixed_3d_arrays%b
 D pkg_ada_date_time_stamp.ads  20210301031058 5a08c1e6 pkg_ada_date_time_stamp%s
 D pkg_ada_dynsized_fixed3d_arrays.ads  20210302183013 2cef9228 pkg_ada_dynsized_fixed3d_arrays%s
 D pkg_ada_random_numbers.ads  20210301063901 60ba9a03 pkg_ada_random_numbers%s
@@ -92,49 +92,74 @@ X 15 a-textio.ads
 49K13*Text_IO 471e16 22|7w10 26r34
 73I12*Field{integer}
 78I12*Number_Base{integer}
-166U14*New_Line 22|64s63 106s15 115s9 126s9
-242U14*Put 22|97s15 99s15 101s18 103s15
-263U14*Put_Line 22|62s24 63s24 64s9 69s9 70s9 118s9 126s24 127s24
+166U14*New_Line 22|69s63 117s15 126s9 177s15 186s9 222s15 227s12 234s9
+242U14*Put 22|108s15 110s15 112s18 114s15 171s15 172s40 173s40 174s40 216s15
+. 217s40 218s40 219s40
+263U14*Put_Line 22|67s24 68s24 69s9 74s9 75s9 130s9 131s9 189s9 190s9 234s24
+. 235s24
+X 16 a-tiflio.ads
+68U14*Put 22|175s18[6|20] 220s18[6|20]
+69f7 Item{float} 22|175r22[6|20] 220r22[6|20]
+70i7 Fore{15|73I12} 22|176r22[6|20] 221r22[6|20]
+71i7 Aft{15|73I12} 22|176r33[6|20] 221r33[6|20]
+72i7 Exp{15|73I12} 22|176r44[6|20] 221r44[6|20]
 X 17 a-tiinio.ads
-48i4*Default_Width{15|73I12} 22|84m12[7|18] 112m12[7|18]
-49i4*Default_Base{15|78I12} 22|85m12[7|18] 113m12[7|18]
-66U14*Put 22|98s18[7|18] 100s18[7|18] 102s18[7|18] 104s21[7|18]
-67i7 Item{integer} 22|98r22[7|18] 100r22[7|18] 102r22[7|18]
+48i4*Default_Width{15|73I12} 22|95m12[7|18] 123m12[7|18] 139m15[7|18] 184m12[7|18]
+. 206m15[7|18]
+49i4*Default_Base{15|78I12} 22|96m12[7|18] 124m12[7|18] 140m15[7|18] 185m12[7|18]
+. 207m15[7|18]
+66U14*Put 22|109s18[7|18] 111s18[7|18] 113s18[7|18] 115s21[7|18] 172s18[7|18]
+. 173s18[7|18] 174s18[7|18] 217s18[7|18] 218s18[7|18] 219s18[7|18]
+67i7 Item{integer} 22|109r22[7|18] 111r22[7|18] 113r22[7|18] 172r22[7|18]
+. 173r22[7|18] 174r22[7|18] 217r22[7|18] 218r22[7|18] 219r22[7|18]
 X 22 main_ada_dynamically_sized_fixed_3d_arrays.adb
-20U11*main_ada_dynamically_sized_fixed_3d_arrays 20b11 130l5 130t47
-26K12 ATIO=26:34 62r19 63r19 64r4 64r58 69r4 70r4 97r10 99r10 101r13 103r10
-. 106r10 115r4 118r4 126r4 126r19 127r19
-27K12 AIntTIO=27:34 84r4 85r4 98r10 100r10 102r10 104r13 112r4 113r4
-28K12 AFltTIO=28:34
+20U11*main_ada_dynamically_sized_fixed_3d_arrays 20b11 238l5 238t47
+26K12 ATIO=26:34 67r19 68r19 69r4 69r58 74r4 75r4 108r10 110r10 112r13 114r10
+. 117r10 126r4 130r4 131r4 171r10 172r35 173r35 174r35 177r10 186r4 189r4
+. 190r4 216r10 217r35 218r35 219r35 222r10 227r7 234r4 234r19 235r19
+27K12 AIntTIO=27:34 95r4 96r4 109r10 111r10 113r10 115r13 123r4 124r4 139r7
+. 140r7 172r10 173r10 174r10 184r4 185r4 206r7 207r7 217r10 218r10 219r10
+28K12 AFltTIO=28:34 175r10 220r10
 29K12 ART=29:34
-32K12 PADTS=32:28 62r4 63r4 127r4
-33K12 PARN=33:28 93r42
-36K12 PADF3D=36:27 52r25 52r53 56r25 56r53
+32K12 PADTS=32:28 67r4 68r4 235r4
+33K12 PARN=33:28 104r42 162r40 213r40
+36K12 PADF3D=36:27 53r25 53r53 59r25 59r53 200r26 200r54
 39i4 ret_integer{integer}
 40f4 ret_float{float}
-43i4 dim1_min{natural} 53r7 57r7 88r13
-43i29 dim1_max{natural} 53r17 57r17 88r25
-44i4 dim2_min{natural} 53r27 57r27 89r16
-44i29 dim2_max{natural} 53r37 57r37 89r28
-45i4 dim3_min{natural} 53r47 57r47 90r19
-45i29 dim3_max{natural} 53r57 57r57 90r31
-52a4 Array3D_Integer_01{24|28A9} 93r10 104r25
-56a4 Array3D_Float_01{24|37A9}
-88i8 I{integer} 93r30 98r30 104r45
-89i11 J{integer} 93r33 100r30 104r47
-90i14 K{integer} 93r36 102r30 104r49
+44i4 dim1_min{natural} 54r7 60r7 89m4 99r13 134m4 157r16 193m4 200r80 209r16
+44i29 dim1_max{natural} 54r17 60r17 89m19 99r25 134m19 157r28 193m19 200r90
+. 209r28
+45i4 dim2_min{natural} 55r7 61r7 90m4 100r16 135m4 158r20 194m4 201r80 210r19
+45i29 dim2_max{natural} 55r17 61r17 90m19 100r28 135m19 158r32 194m19 201r90
+. 210r31
+46i4 dim3_min{natural} 56r7 62r7 91m4 101r19 136m4 159r22 195m4 202r80 211r22
+46i29 dim3_max{natural} 56r17 62r17 91m19 101r31 136m19 159r34 195m19 202r90
+. 211r34
+53a4 Array3D_Integer_01{24|28A9} 104r10 115r25
+59a4 Array3D_Float_01{24|37A9} 162r10 175r30 213r10 220r30
+99i8 I{integer} 104r30 109r30 115r45
+100i11 J{integer} 104r33 111r30 115r47
+101i14 K{integer} 104r36 113r30 115r49
+157i11 I{integer} 162r28 172r30 175r48
+158i15 J{integer} 162r31 173r30 175r50
+159i17 K{integer} 162r34 174r30 175r52
+200a7 Array3D_Float_02{24|37A9}
+209i11 I{integer} 213r28 217r30 220r48
+210i14 J{integer} 213r31 218r30 220r50
+211i17 K{integer} 213r34 219r30 220r52
 X 23 pkg_ada_date_time_stamp.ads
 14K9*pkg_ada_date_time_stamp 22|13w6 32r28 23|36e28
-22U14*dtstamp 22|62s10 63s10 127s10
+22U14*dtstamp 22|67s10 68s10 235s10
 X 24 pkg_ada_dynsized_fixed3d_arrays.ads
 15K9*pkg_ada_dynsized_fixed3d_arrays 22|17w6 36r27 24|50e36
-28A9*typ_array3d_int(integer)<integer><integer><integer> 22|52r32
-31V13*get_array3d_integer{28A9} 22|52s60
-37A9*typ_array3d_float(float)<integer><integer><integer> 22|56r32
-40V13*get_array3d_float{37A9} 22|56s60
+28A9*typ_array3d_int(integer)<integer><integer><integer> 22|53r32
+31V13*get_array3d_integer{28A9} 22|53s60
+37A9*typ_array3d_float(float)<integer><integer><integer> 22|59r32 200r33
+40V13*get_array3d_float{37A9} 22|59s60 200s61
 X 25 pkg_ada_random_numbers.ads
 3K9*pkg_ada_random_numbers 22|14w6 33r28 25|33e27
-9V13*get_random_integer{integer} 22|93s47
+9V13*get_random_integer{integer} 22|104s47
+10V13*get_random_float{float} 22|162s45 213s45
 X 42 s-stausa.ads
 203U14*Initialize 204i<c,__gnat_stack_usage_initialize>22
 268U14*Output_Results 272i<c,__gnat_stack_usage_output_results>22

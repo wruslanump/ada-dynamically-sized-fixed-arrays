@@ -39,10 +39,11 @@ is
    ret_integer : Integer := 999;
    ret_float   : Float   := 999.999;
    
-   -- 3D ARRAY (CUBE) OD SIZE = (4 x 5 x 3) = 60 elements.
-   dim1_min : Natural := 1; dim1_max : Natural := 4; -- 4 elements
-   dim2_min : Natural := 3; dim2_max : Natural := 7; -- 5 elements
-   dim3_min : Natural := 6; dim3_max : Natural := 8; -- 3 elements
+   -- WE CHANGE THESE DYNAMICALLY PACKAGE-WISE
+   -- BUT MUST BE WITHIN DEFINED RANGE
+   dim1_min : Natural := 1; dim1_max : Natural := 10;
+   dim2_min : Natural := 1; dim2_max : Natural := 10;
+   dim3_min : Natural := 1; dim3_max : Natural := 10; 
    
    
    -- All 3D array elements initialized to zero during creation
@@ -50,11 +51,15 @@ is
    
    -- Create a 3D integer array
    Array3D_Integer_01 : PADF3D.typ_array3d_int   := PADF3D.get_array3d_integer   
-     (dim1_min, dim1_max, dim2_min, dim2_max, dim3_min, dim3_max);
+     (dim1_min, dim1_max, 
+      dim2_min, dim2_max, 
+      dim3_min, dim3_max);
    
    -- Create a 3D float array
    Array3D_Float_01   : PADF3D.typ_array3d_float := PADF3D.get_array3d_float     
-     (dim1_min, dim1_max, dim2_min, dim2_max, dim3_min, dim3_max);
+     (dim1_min, dim1_max, 
+      dim2_min, dim2_max, 
+      dim3_min, dim3_max);
    
    
 begin  -- for procedure main
@@ -79,6 +84,12 @@ begin  -- for procedure main
    -- AIntTIO.Put (Item => (value int_variable), 
    --              Width => (width of int_variable), 
    --              Base => (base of int_variable );
+   
+   -- CHANGE 3DARRAY DIMENSIONS
+   dim1_min := 1; dim1_max := 4; 
+   dim2_min := 3; dim2_max := 7; 
+   dim3_min := 6; dim3_max := 8;
+   
    
    -- SET DEFAULTS BEFORE LOOP
    AIntTIO.Default_Width := 3;  -- Integer width
@@ -114,13 +125,110 @@ begin  -- for procedure main
    
    ATIO.New_Line;
    
-   -- Test (2) Array3D_Integer_02 
+   
+   -- Test (2) Array3D_Float_01 
    ATIO.Put_Line ("========================================================");
-   -- Assume variables changes for dim1min, dim1max, dim2min, dim2max
+   ATIO.Put_Line ("(2) TESTING Array3D_Float_01 (2..5, 4..6, 7..8) assignments.");
    
+      -- RESET package-wise variables because was changed in Test (2)
+   dim1_min := 2; dim1_max := 5; 
+   dim2_min := 4; dim2_max := 6; 
+   dim3_min := 7; dim3_max := 8;
+      
+      -- SET DECIMAL WIDTH BEFORE LOOP
+      AIntTIO.Default_Width := 3;  -- Integer width
+      AIntTIO.Default_Base  := 10; -- Decimal
    
-   -- ***** TO CONTINUE HERE.
+   -- FOR FLOATS
+   -- REF: https://www.adaic.org/resources/add_content/standards/05rm/html/RM-A-10-9.html
+   -- EXAMPLE: AFltTIO.Put(X, Fore => 5, Aft => 3, Exp => 2);   
    
+   -- USING FLOAT FORMAT 
+         -- Format based on distance referred to decimal point
+         -- Fore = before decimal point
+         -- Aft  = after decimal point
+         -- Exp  = width of exponent (including + and - sign)
+         
+   -- Default_Fore : Field := 2;
+   -- Default_Aft  : Field := Num'Digits-1;
+   -- Default_Exp  : Field := 3;
+   
+      -- EXECUTE LOOP
+      for I in dim1_min .. dim1_max loop
+          for J in dim2_min .. dim2_max loop 
+            for K in dim3_min .. dim3_max loop 
+            
+         -- Assign a random float to each element of 3D array   
+         Array3D_Float_01 (I, J, K) := PARN.get_random_float (-10.0, +10.0);
+            
+         -- WORKING BUT USING 'Image
+         -- ATIO.Put_Line ("Array2D_Float_01 (" & 
+         --               Integer'Image (I) & "," & 
+         --               Integer'Image (J) & ") = " &
+         --               Float'Image(Array2D_Float_01 (I,J))); 
+         
+         -- DISPLAY LINES WITHOUT USING 'Image AS ABOVE
+         ATIO.Put ("Array3D_Float_01 (" );
+         AIntTIO.Put(Item => I);  ATIO.Put(",");
+         AIntTIO.Put(Item => J);  ATIO.Put(",");
+         AIntTIO.Put(Item => K);  ATIO.Put(") = ");
+         AFltTIO.Put(Item => Array3D_Float_01 (I,J,K),
+                     Fore => 3, Aft => 10, Exp => 3);  
+         ATIO.New_Line;
+       
+            end loop; -- END look K   
+         end loop; -- END loop J
+   end loop; -- END loop I 
+   
+   -- RESET AFTER LOOP
+   AIntTIO.Default_Width := 8;  -- Integer width
+   AIntTIO.Default_Base  := 10; -- Decimal
+   ATIO.New_Line;
+   
+    -- Test (3) Array3D_Float_02 
+   ATIO.Put_Line ("========================================================");
+   ATIO.Put_Line ("(3) TESTING Array3D_Float_02 (1..6, 1..4, 1..3) assignments.");   
+  
+   -- ASSIGN THE SIZE DYNAMICALLY (CHANGING IT)
+   dim1_min := 1; dim1_max := 6; 
+   dim2_min := 1; dim2_max := 4;
+   dim3_min := 1; dim3_max := 3;  
+   
+   declare
+      -- Create a new 3D array
+      -- Initialized to zero during creation
+      Array3D_Float_02 : PADF3D.typ_array3d_float := PADF3D.get_array3d_float (dim1_min, dim1_max,
+                                                                               dim2_min, dim2_max, 
+                                                                               dim3_min, dim3_max);
+   begin -- for declare section FLOAT
+          
+       -- SET DEFAULTS BEFORE LOOP
+      AIntTIO.Default_Width := 3;  -- Integer width
+      AIntTIO.Default_Base  := 10; -- Decimal
+      
+      for I in dim1_min .. dim1_max loop
+         for J in dim2_min .. dim2_max loop 
+            for K in dim3_min .. dim3_max loop 
+               
+         Array3D_Float_01 (I, J, K) := PARN.get_random_float (-10.0, +10.0);  
+            
+         -- DISPLAY LINES WITHOUT USING 'Image AS ABOVE
+         ATIO.Put ("Array3D_Float_01 (" );
+         AIntTIO.Put(Item => I);  ATIO.Put(",");
+         AIntTIO.Put(Item => J);  ATIO.Put(",");
+         AIntTIO.Put(Item => K);  ATIO.Put(") = ");
+         AFltTIO.Put(Item => Array3D_Float_01 (I,J,K),
+                     Fore => 3, Aft => 10, Exp => 3);  
+         ATIO.New_Line;
+         
+             end loop;  -- END loop K  
+         end loop; -- END loop J
+      end loop; -- END loop I   
+      ATIO.New_Line;
+      
+   end; -- END declare section FLOAT     
+   
+    
    -- =====================================================       
       
    ATIO.New_Line; ATIO.Put_Line ("MAIN PROGRAM TERMINATED SUCCESSFULLY.");
